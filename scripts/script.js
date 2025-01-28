@@ -34,11 +34,30 @@ function saveSettings() {
     const selectedLanguage = document.getElementById("language").value;
     const selectedCurrency = document.getElementById("currency").value;
 
+<<<<<<< HEAD
     // Actualizar idioma y bandera
     if (languages[selectedLanguage]) {
         const { abbr, flag: flagSrc } = languages[selectedLanguage];
         languageAbbr.textContent = abbr;
         flag.src = flagSrc;
+=======
+    // Update flag and language abbreviation
+    const flag = document.getElementById('flag');
+    const languageAbbr = document.getElementById('language-abbr');
+
+    if (country === 'us') {
+        flag.src = 'img/EEUU.png';
+        languageAbbr.textContent = 'US';
+    } else if (country === 'es') {
+        flag.src = 'img/españa.jpg';
+        languageAbbr.textContent = 'ES';
+    } else if (country === 'fr') {
+        flag.src = 'img/francia.png';
+        languageAbbr.textContent = 'FR';
+    } else if (country === 'PE') {
+        flag.src = 'img/PERU.png';
+        languageAbbr.textContent = 'PE';
+>>>>>>> 2575cd3dfbb63094133b20ca325249e61aaa9211
     }
 
     // Actualizar moneda y precios
