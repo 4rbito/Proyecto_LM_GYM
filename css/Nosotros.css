@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f0f0f0; /* Fondo gris claro */
+  background-color: grey; /* Fondo gris claro */
   color: #333; /* Gris oscuro para el texto */
 }
 
