@@ -73,25 +73,12 @@
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Producto 1</td>
-                            <td class="price">€29.99</td>
-                            <td><input type="number" value="1" min="1" class="quantity"></td>
-                            <td class="total">€29.99</td>
-                            <td><button class="btn-remove">Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td>Producto 2</td>
-                            <td class="price">€39.99</td>
-                            <td><input type="number" value="1" min="1" class="quantity"></td>
-                            <td class="total">€39.99</td>
-                            <td><button class="btn-remove">Eliminar</button></td>
-                        </tr>
+                    <tbody id="cart-items">
+                        <!-- Los elementos del carrito se insertarán aquí -->
                     </tbody>
                 </table>
                 <div class="cart-summary">
-                    <h3>Total: <span id="cart-total">€69.98</span></h3>
+                    <h3>Total: <span id="cart-total">€0.00</span></h3>
                     <button class="btn-checkout" onclick="proceedToPayment()">Proceder al Pago</button>
                 </div>
             </div>
@@ -141,33 +128,47 @@
     <script src="../scripts/script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const quantities = document.querySelectorAll('.quantity');
-            const prices = document.querySelectorAll('.price');
-            const totals = document.querySelectorAll('.total');
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartTableBody = document.getElementById('cart-items');
             const cartTotal = document.getElementById('cart-total');
 
-            function updateTotals() {
+            function updateCart() {
+                cartTableBody.innerHTML = '';
                 let total = 0;
-                quantities.forEach((quantity, index) => {
-                    const price = parseFloat(prices[index].textContent.replace('€', ''));
-                    const quantityValue = parseInt(quantity.value);
-                    const itemTotal = price * quantityValue;
-                    totals[index].textContent = `€${itemTotal.toFixed(2)}`;
-                    total += itemTotal;
+                cartItems.forEach(item => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${item.name}</td>
+                        <td class="price">€${item.price.toFixed(2)}</td>
+                        <td><input type="number" value="${item.quantity}" min="1" class="quantity"></td>
+                        <td class="total">€${(item.price * item.quantity).toFixed(2)}</td>
+                        <td><button class="btn-remove">Eliminar</button></td>
+                    `;
+                    cartTableBody.appendChild(row);
+                    total += item.price * item.quantity;
+
+                    row.querySelector('.quantity').addEventListener('input', function() {
+                        item.quantity = parseInt(this.value);
+                        localStorage.setItem('cart', JSON.stringify(cartItems));
+                        updateCart();
+                    });
+
+                    row.querySelector('.btn-remove').addEventListener('click', function() {
+                        const index = cartItems.indexOf(item);
+                        cartItems.splice(index, 1);
+                        localStorage.setItem('cart', JSON.stringify(cartItems));
+                        updateCart();
+                    });
                 });
                 cartTotal.textContent = `€${total.toFixed(2)}`;
             }
 
-            quantities.forEach(quantity => {
-                quantity.addEventListener('input', updateTotals);
-            });
+            updateCart();
 
-            updateTotals();
+            window.proceedToPayment = function() {
+                window.location.href = 'pago.html';
+            };
         });
-
-        function proceedToPayment() {
-            window.location.href = 'pago.html';
-        }
     </script>
 </body>
 </html>

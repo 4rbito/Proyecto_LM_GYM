@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlphaStrength</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/Alpha_strenght.jpg" type="image/jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>AlphaStrength</title>
 </head>
 <body>
     <!-- Barra Superior -->
@@ -15,7 +15,7 @@
             <div class="settings" onclick="openModal()">
                 <img id="flag" src="img/españa.jpg" alt="ES" class="flag">
                 <span id="language-abbr">ES</span>
-                <span  id="currency-symbol" class="currency">€</span> <!-- Aquí mostramos el símbolo de la moneda -->
+                <span class="currency">€</span>
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
         <div class="container">
             <div class="header-left">
                 <img src="img/Alpha_strenght.jpg" alt="AlphaStrength Logo" class="logo">
-                <h1 id="site-title">AlphaStrength</h1> <!-- El título será dinámico -->
+                <h1>AlphaStrength</h1>
             </div>
             <div class="header-center">
                 <input type="text" placeholder="Buscar..." class="search-bar">
@@ -58,34 +58,28 @@
 
     <!-- Sección Principal -->
     <main>
-        <!-- Hero -->
-        <section class="hero">
+        <!-- Productos -->
+        <section class="productos">
             <div class="container">
-                <h2 id="hero-title">Bienvenido a AlphaStrength</h2>
-                <p id="hero-description">Tu tienda única para todas tus necesidades de fitness.</p>
-                <a href="#" class="btn" id="shop-now-btn">Comprar Ahora</a>
-            </div>
-        </section>
-
-        <!-- Productos Destacados -->
-        <section class="products">
-            <div class="container">
-                <h2 id="featured-products-title">Productos Destacados</h2>
-                <div class="product-grid">
+                <h2>Productos</h2>
+                <div class="product-list">
                     <div class="product">
-                        <img src="img/proteina.jpg" alt="Producto 1">
-                        <h3 id="product1-title">Producto 1</h3>
-                        <p id="product1-price">€29.99</p> <!-- Aseguramos el ID para actualizar dinámicamente -->
+                        <img src="img/creatina.jpg" alt="creatina">
+                        <h3>Creatina</h3>
+                        <p>€29.99</p>
+                        <button class="btn-add-cart" data-name="Producto 1" data-price="29.99">Añadir al Carrito</button>
                     </div>
                     <div class="product">
-                        <img src="img/creatina.jpg" alt="Producto 2">
-                        <h3 id="product2-title">Producto 2</h3>
-                        <p id="product2-price">€39.99</p>
+                        <img src="img/proteina.jpg" alt="proteina">
+                        <h3>Proteina</h3>
+                        <p>€39.99</p>
+                        <button class="btn-add-cart" data-name="Producto 2" data-price="39.99">Añadir al Carrito</button>
                     </div>
                     <div class="product">
-                        <img src="img/ashwagandha.jpg" alt="Producto 3">
-                        <h3 id="product3-title">Producto 3</h3>
-                        <p id="product3-price">€49.99</p>
+                        <img src="img/ashwagandha.jpg" alt="ashwagandha">
+                        <h3>Ashwagandha</h3>
+                        <p>€19.99</p>
+                        <button class="btn-add-cart" data-name="Producto 3" data-price="19.99">Añadir al Carrito</button>
                     </div>
                 </div>
             </div>
@@ -113,6 +107,14 @@
                 </select>
             </div>
             <div class="modal-section">
+                <label for="country">País:</label>
+                <select id="country">
+                    <option value="us">Estados Unidos</option>
+                    <option value="es" selected>España</option>
+                    <option value="fr">Francia</option>
+                </select>
+            </div>
+            <div class="modal-section">
                 <label for="currency">Moneda:</label>
                 <select id="currency">
                     <option value="usd">$ USD</option>
@@ -125,5 +127,30 @@
     </div>
 
     <script src="scripts/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addCartButtons = document.querySelectorAll('.btn-add-cart');
+
+            addCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productName = this.getAttribute('data-name');
+                    const productPrice = this.getAttribute('data-price');
+                    addToCart(productName, productPrice);
+                });
+            });
+
+            function addToCart(name, price) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const product = cart.find(item => item.name === name);
+                if (product) {
+                    product.quantity += 1;
+                } else {
+                    cart.push({ name, price: parseFloat(price), quantity: 1 });
+                }
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert('Producto añadido al carrito');
+            }
+        });
+    </script>
 </body>
 </html>
