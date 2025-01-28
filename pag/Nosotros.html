@@ -9,30 +9,135 @@
     <title>Nosotros</title>
 </head>
 <body>
-    <section class="about-us">
-        <div class="container">
-          <h1>Quiénes Somos</h1>
-          <p>
-            Bienvenido a <strong>AlphaStrength</strong>, tu tienda de confianza para suplementos de gimnasio. 
-            Nos apasiona ayudarte a alcanzar tus metas físicas y mejorar tu rendimiento, ya seas principiante o atleta profesional.
-          </p>
-          <p>
-            En AlphaStrength ofrecemos productos de alta calidad, cuidadosamente seleccionados para cubrir tus necesidades:
-            <ul>
-              <li>Proteínas</li>
-              <li>Aminoácidos y BCAA</li>
-              <li>Creatina</li>
-              <li>Vitaminas y minerales</li>
-              <li>Snacks saludables</li>
-            </ul>
-          </p>
-          <p>
-            Nuestro equipo está formado por expertos en nutrición deportiva y fitness, listos para asesorarte en cada paso de tu viaje hacia una mejor versión de ti mismo.
-          </p>
-          <p>
-            <strong>Únete a la familia AlphaStrength</strong> y da el primer paso hacia tus objetivos. ¡Vamos a crecer juntos!
-          </p>
-        </div>
-      </section>
+    <!-- Barra Superior -->
+    <div class="top-bar">
+      <div class="container">
+          <div class="settings" onclick="openModal()">
+              <img id="flag" src="img/españa.jpg" alt="ES" class="flag">
+              <span id="language-abbr">ES</span>
+              <span class="currency">€</span> <!-- Aquí mostramos el símbolo de la moneda -->
+          </div>
+      </div>
+  </div>
+
+  <!-- Encabezado -->
+  <header class="header">
+      <div class="container">
+          <div class="header-left">
+              <img src="img/Alpha_strenght.jpg" alt="AlphaStrength Logo" class="logo">
+              <h1>AlphaStrength</h1>
+          </div>
+          <div class="header-center">
+              <input type="text" placeholder="Buscar..." class="search-bar">
+              <button class="search-button"><i class="fas fa-search"></i></button>
+          </div>
+          <div class="header-right">
+              <a href="pag/cuenta.html" class="account">
+                  <i class="fas fa-user icon"></i>
+                  <span id="account-text">Cuenta</span>
+              </a>
+              <a href="pag/cesta.html" class="cart">
+                  <i class="fas fa-shopping-cart icon"></i>
+                  <span id="cart-text">Cesta</span>
+              </a>
+          </div>
+      </div>
+  </header>
+
+  <!-- Navegación -->
+  <nav class="navigation">
+      <div class="container">
+          <ul>
+              <li><a href="index.html" id="home-link">Inicio</a></li>
+              <li><a href="pag\Productos.html" id="productos-link">Productos</a></li>
+              <li><a href="pag\Nosotros.html" id="about-link">Acerca de</a></li>
+              <li><a href="#" id="contact-link">Contacto</a></li>
+          </ul>
+      </div>
+  </nav>
+
+  <!-- Sección Principal -->
+  <main>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/Nosotros.css">
+        <link rel="icon" href="/img/Alpha_strenght.jpg" type="image/jpeg">
+        <link rel="icon" href="/img/Alpha_strenght.jpg" type="image/jpeg">
+        <title>Nosotros</title>
+    </head>
+    <body>
+        <section class="about-us">
+            <div class="container">
+              <h1>Quiénes Somos</h1>
+              <p>
+                Bienvenido a <strong>AlphaStrength</strong>, tu tienda de confianza para suplementos de gimnasio. 
+                Nos apasiona ayudarte a alcanzar tus metas físicas y mejorar tu rendimiento, ya seas principiante o atleta profesional.
+              </p>
+              <p>
+                En AlphaStrength ofrecemos productos de alta calidad, cuidadosamente seleccionados para cubrir tus necesidades:
+                <ul>
+                  <li>Proteínas</li>
+                  <li>Aminoácidos y BCAA</li>
+                  <li>Creatina</li>
+                  <li>Vitaminas y minerales</li>
+                  <li>Snacks saludables</li>
+                </ul>
+              </p>
+              <p>
+                Nuestro equipo está formado por expertos en nutrición deportiva y fitness, listos para asesorarte en cada paso de tu viaje hacia una mejor versión de ti mismo.
+              </p>
+              <p>
+                <strong>Únete a la familia AlphaStrength</strong> y da el primer paso hacia tus objetivos. ¡Vamos a crecer juntos!
+              </p>
+            </div>
+          </section>
+    </body>
+    </html>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer>
+      <div class="container">
+          <p>&copy; 2023 AlphaStrength. Todos los derechos reservados.</p>
+      </div>
+  </footer>
+
+  <!-- Modal de Configuración -->
+  <div id="settingsModal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Configuración</h2>
+          <div class="modal-section">
+              <label for="language">Idioma:</label>
+              <select id="language">
+                  <option value="en">English</option>
+                  <option value="es" selected>Español</option>
+                  <option value="fr">Français</option>
+              </select>
+          </div>
+          <div class="modal-section">
+              <label for="country">País:</label>
+              <select id="country">
+                  <option value="us">Estados Unidos</option>
+                  <option value="es" selected>España</option>
+                  <option value="fr">Francia</option>
+              </select>
+          </div>
+          <div class="modal-section">
+              <label for="currency">Moneda:</label>
+              <select id="currency">
+                  <option value="usd">$ USD</option>
+                  <option value="eur" selected>€ EUR</option>
+                  <option value="gbp">£ GBP</option>
+              </select>
+          </div>
+          <button onclick="saveSettings()">Guardar</button>
+      </div>
+  </div>
+
+  <script src="scripts/script.js"></script>
 </body>
 </html>
