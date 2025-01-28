@@ -94,8 +94,17 @@ body {
     align-items: center;
     margin-left: 1rem;
     color: #fff; /* Blanco para el texto */
+    text-decoration: none;
  }
  
+ .header-right .account :hover,
+ .header-right .cart :hover{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    color: #ff0000; /* Blanco para el texto */
+ }
+
  .header-right .icon {
     margin-right: 0.5rem;
  }
@@ -131,6 +140,13 @@ body {
     text-decoration: none;
  }
  
+ .navigation ul li a:hover {
+   color: #fff; /* Blanco para el texto */
+   background-color: #555;
+   border-radius: 5px;
+   padding: 0.3rem 0.5rem;
+}
+
  .hero {
     background: url('../img/hero.jpg') no-repeat center center/cover;
     color: #fff; /* Blanco para el texto */
