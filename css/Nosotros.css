@@ -268,3 +268,63 @@ footer {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+.quienes-somos {
+  background-color: #f9f9f9; /* Fondo gris claro */
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.quienes-somos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quienes-somos h2 {
+  font-size: 2.5rem;
+  color: #333; /* Gris oscuro */
+  margin-bottom: 1rem;
+}
+
+.quienes-somos p {
+  font-size: 1.2rem;
+  color: #666; /* Gris medio */
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.quienes-somos .team {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.quienes-somos .team-member {
+  background-color: #fff; /* Blanco */
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.quienes-somos .team-member img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.quienes-somos .team-member h3 {
+  font-size: 1.5rem;
+  color: #333; /* Gris oscuro */
+  margin-bottom: 0.5rem;
+}
+
+.quienes-somos .team-member p {
+  font-size: 1rem;
+  color: #666; /* Gris medio */
+  line-height: 1.4;
+}
