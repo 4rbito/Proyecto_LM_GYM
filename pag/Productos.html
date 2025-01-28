@@ -1,13 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+     <!-- Barra Superihor -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Productos.css">
-    <link rel="icon" href="/img/Alpha_strenght.jpg" type="image/jpeg">
-    <title>Página de Productos</title>
+    <title>Productos - AlphaStrength</title>
+    <link rel="stylesheet" href="/css/Productos.css">
+    <link rel="icon" href="img/Alpha_strenght.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  
+    <!-- Barra Superihor -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="settings" onclick="openModal()">
+                <img id="flag" src="img/españa.jpg" alt="ES" class="flag">
+                <span id="language-abbr">ES</span>
+                <span class="currency-symbol">€</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="container">
+            <div class="header-left">
+                <img src="img/Alpha_strenght.jpg" alt="AlphaStrength Logo" class="logo">
+                <h1>AlphaStrength</h1>
+            </div>
+            <div class="header-center">
+                <input type="text" placeholder="Buscar..." class="search-bar">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-right">
+                <a href="pag/cuenta.html" class="account">
+                    <i class="fas fa-user icon"></i>
+                    <span id="account-text">Cuenta</span>
+                </a>
+                <a href="pag/cesta.html" class="cart">
+                    <i class="fas fa-shopping-cart icon"></i>
+                    <span id="cart-text">Cesta</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="navigation">
+        <div class="container">
+            <ul>
+                <li><a href="index.html" id="home-link">Inicio</a></li>
+                <li><a href="PRODUCTOS.html" id="products-link">Productos</a></li>
+                <li><a href="pag/Nosotros.html" id="about-link">Acerca de</a></li>
+                <li><a href="pag/Contacto.html" id="contact-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección Principal -->
+    <main>
+        <div class="container">
+            <div class="products">
+                <div class="product">
+                    <img src="/img/pixlr-image-generator-edd828d4-2a6e-4a8c-bd86-b5eb0f1282af.png" alt="Producto 1">
+                    <h3>Producto 1</h3>
+                    <p>Descripción del producto 1.</p>
+                    <p class="price">$10.00</p>
+                </div>
+                <div class="product">
+                    <img src="/img/pixlr-image-generator-ac9b5bb9-26f4-41f6-a4cc-a985c69903fd.png" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Descripción del producto 2.</p>
+                    <p class="price">$20.00</p>
+                </div>
+                <div class="product">
+                    <img src="/img/pixlr-image-generator-74552e20-3a37-4255-8b3f-8cfe0d0b9926.png" alt="Producto 3">
+                    <h3>Producto 3</h3>
+                    <p>Descripción del producto 3.</p>
+                    <p class="price">$30.00</p>
+                </div>
+                <div class="product">
+                    <img src="/img/creatina.jpg" alt="Producto 3">
+                    <h3>Producto 4</h3>
+                    <p>Descripción del producto 4..</p>
+                    <p class="price">$40.00</p>
+                </div>
+                <div class="product">
+                    <img src="/img/ashwagandha.jpg" alt="Producto 3">
+                    <h3>Producto 5</h3>
+                    <p>Descripción del producto 5.</p>
+                    <p class="price">$50.00</p>
+                </div>
+                <div class="product">
+                    <img src="/img/proteina.jpg" alt="Producto 3">
+                    <h3>Producto 6</h3>
+                    <p>Descripción del producto 6.</p>
+                    <p class="price">$60.00</p>
+                </div>
+                <div class="product">
+                    <img src="/img/pixlr-image-generator-f5aaee25-37cb-4338-902d-82b6944a2bd0.png" alt="Producto 3">
+                    <h3>Producto 7</h3>
+                    <p>Descripción del producto 7.</p>
+                    <p class="price">$70.00</p>
+                </div>
+                <div class="product">
+                    <img src="/img/pixlr-image-generator-f5aaee25-37cb-4338-902d-82b6944a2bd0.png" alt="Producto 3">
+                    <h3>Producto 7</h3>
+                    <p>Descripción del producto 7.</p>
+                    <p class="price">$70.00</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Piie de Página -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 AlphaStrength. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Configuración -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Configuración</h2>
+            <div class="modal-section">
+                <label for="language">Idioma:</label>
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="es" selected>Español</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+            <div class="modal-section">
+                <label for="country">País:</label>
+                <select id="country">
+                    <option value="us">Estados Unidos</option>
+                    <option value="es" selected>España</option>
+                    <option value="fr">Francia</option>
+                </select>
+            </div>
+            <div class="modal-section">
+                <label for="currency">Moneda:</label>
+                <select id="currency">
+                    <option value="usd">$ USD</option>
+                    <option value="eur" selected>€ EUR</option>
+                    <option value="gbp">£ GBP</option>
+                </select>
+            </div>
+            <button onclick="saveSettings()">Guardar</button>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>
