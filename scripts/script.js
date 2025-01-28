@@ -1,80 +1,130 @@
-const languageAbbr = document.getElementById("language-abbr");
-const flag = document.getElementById("flag");
-const currencySpan = document.querySelector(".currency");
-
-// Definición de idiomas y monedas disponibles
+// Definimos los textos en diferentes idiomas
 const languages = {
-    en: { abbr: "US", flag: "img/EEUU.png" },
-    es: { abbr: "ES", flag: "img/españa.jpg" },
-    fr: { abbr: "FR", flag: "img/francia.png" },
+    en: { abbr: "US", flag: "img/EEUU.png", texts: {
+        "site-title": "AlphaStrength",
+        "hero-title": "Welcome to AlphaStrength",
+        "hero-description": "Your one-stop shop for all your fitness needs.",
+        "featured-products-title": "Featured Products",
+        "product1-title": "Product 1",
+        "product2-title": "Product 2",
+        "product3-title": "Product 3",
+        "home-link": "Home",
+        "productos-link": "Products",
+        "about-link": "About Us",
+        "contact-link": "Contact",
+        "account-text": "Account",      // Traducción para "Cuenta"
+        "cart-text": "Cart"             // Traducción para "Cesta"
+    }},
+    es: { abbr: "ES", flag: "img/españa.jpg", texts: {
+        "site-title": "AlphaStrength",
+        "hero-title": "Bienvenido a AlphaStrength",
+        "hero-description": "Tu tienda única para todas tus necesidades de fitness.",
+        "featured-products-title": "Productos Destacados",
+        "product1-title": "Producto 1",
+        "product2-title": "Producto 2",
+        "product3-title": "Producto 3",
+        "home-link": "Inicio",
+        "productos-link": "Productos",
+        "about-link": "Acerca de",
+        "contact-link": "Contacto",
+        "account-text": "Cuenta",        // Traducción para "Cuenta"
+        "cart-text": "Cesta"             // Traducción para "Cesta"
+    }},
+    fr: { abbr: "FR", flag: "img/francia.png", texts: {
+        "site-title": "AlphaStrength",
+        "hero-title": "Bienvenue chez AlphaStrength",
+        "hero-description": "Votre magasin unique pour tous vos besoins en fitness.",
+        "featured-products-title": "Produits en Vedette",
+        "product1-title": "Produit 1",
+        "product2-title": "Produit 2",
+        "product3-title": "Produit 3",
+        "home-link": "Accueil",
+        "productos-link": "Produits",
+        "about-link": "À propos",
+        "contact-link": "Contact",
+        "account-text": "Compte",        // Traducción para "Cuenta"
+        "cart-text": "Panier"            // Traducción para "Cesta"
+    }},
 };
 
+// Definimos las monedas y sus tasas de conversión
 const currencies = {
     usd: { symbol: "$", conversionRate: 1 },
     eur: { symbol: "€", conversionRate: 0.9 },
     gbp: { symbol: "£", conversionRate: 0.75 },
 };
 
-// Guardar configuraciones en localStorage
+// Función para guardar la configuración en localStorage
 function saveSettings() {
     const selectedLanguage = document.getElementById("language").value;
     const selectedCurrency = document.getElementById("currency").value;
 
-    // Guardar las configuraciones seleccionadas en localStorage
     localStorage.setItem("language", selectedLanguage);
     localStorage.setItem("currency", selectedCurrency);
 
-    // Actualizar idioma, bandera y moneda
-    if (languages[selectedLanguage]) {
-        const { abbr, flag: flagSrc } = languages[selectedLanguage];
-        languageAbbr.textContent = abbr;
-        flag.src = flagSrc;
-    }
-
-    if (currencies[selectedCurrency]) {
-        const { symbol, conversionRate } = currencies[selectedCurrency];
-        currencySpan.textContent = symbol;
-        updateProductPrices(conversionRate, symbol);
-    }
-
-    // Cerrar modal
+    updateContent(selectedLanguage, selectedCurrency);
     closeModal();
 }
 
-// Cargar configuraciones desde localStorage al cargar la página
+// Función para cargar la configuración desde localStorage
 function loadSettings() {
-    const savedLanguage = localStorage.getItem("language") || "es"; // Idioma por defecto: español
-    const savedCurrency = localStorage.getItem("currency") || "eur"; // Moneda por defecto: euro
+    const savedLanguage = localStorage.getItem("language") || "es";
+    const savedCurrency = localStorage.getItem("currency") || "eur";
 
-    // Establecer valores en el modal
     document.getElementById("language").value = savedLanguage;
     document.getElementById("currency").value = savedCurrency;
 
-    // Aplicar configuraciones guardadas
-    if (languages[savedLanguage]) {
-        const { abbr, flag: flagSrc } = languages[savedLanguage];
-        languageAbbr.textContent = abbr;
-        flag.src = flagSrc;
-    }
-
-    if (currencies[savedCurrency]) {
-        const { symbol, conversionRate } = currencies[savedCurrency];
-        currencySpan.textContent = symbol;
-        updateProductPrices(conversionRate, symbol);
-    }
+    updateContent(savedLanguage, savedCurrency);
 }
 
-// Actualizar precios de productos
+// Función para actualizar el contenido según el idioma y la moneda seleccionada
+function updateContent(language, currency) {
+    const selectedLanguage = languages[language];
+    const selectedCurrency = currencies[currency];
+
+    // Actualizamos el idioma
+    document.getElementById("language-abbr").textContent = selectedLanguage.abbr;
+    document.getElementById("flag").src = selectedLanguage.flag;
+    document.getElementById("currency-symbol").textContent = selectedCurrency.symbol;
+
+    // Actualizamos los textos de la navegación
+    document.getElementById("home-link").textContent = selectedLanguage.texts["home-link"];
+    document.getElementById("productos-link").textContent = selectedLanguage.texts["productos-link"];
+    document.getElementById("about-link").textContent = selectedLanguage.texts["about-link"];
+    document.getElementById("contact-link").textContent = selectedLanguage.texts["contact-link"];
+
+    // Actualizamos el contenido principal
+    document.getElementById("site-title").textContent = selectedLanguage.texts["site-title"];
+    document.getElementById("hero-title").textContent = selectedLanguage.texts["hero-title"];
+    document.getElementById("hero-description").textContent = selectedLanguage.texts["hero-description"];
+    document.getElementById("featured-products-title").textContent = selectedLanguage.texts["featured-products-title"];
+    document.getElementById("product1-title").textContent = selectedLanguage.texts["product1-title"];
+    document.getElementById("product2-title").textContent = selectedLanguage.texts["product2-title"];
+    document.getElementById("product3-title").textContent = selectedLanguage.texts["product3-title"];
+
+    // Actualizamos los textos del header-right
+    document.getElementById("account-text").textContent = selectedLanguage.texts["account-text"];
+    document.getElementById("cart-text").textContent = selectedLanguage.texts["cart-text"];
+
+    // Actualizamos la moneda y los precios
+    updateProductPrices(selectedCurrency.conversionRate, selectedCurrency.symbol);
+}
+
+// Función para actualizar los precios de los productos
 function updateProductPrices(conversionRate, symbol) {
-    const productPrices = document.querySelectorAll(".product-price");
-    productPrices.forEach((price) => {
-        const basePrice = parseFloat(price.getAttribute("data-base-price"));
-        const convertedPrice = (basePrice * conversionRate).toFixed(2);
-        price.textContent = `${symbol}${convertedPrice}`;
+    const products = [
+        { element: document.getElementById("product1-price"), basePrice: 29.99 },
+        { element: document.getElementById("product2-price"), basePrice: 39.99 },
+        { element: document.getElementById("product3-price"), basePrice: 49.99 },
+    ];
+
+    products.forEach((product) => {
+        const convertedPrice = (product.basePrice * conversionRate).toFixed(2);
+        product.element.textContent = `${symbol}${convertedPrice}`;
     });
 }
 
-// Abrir y cerrar el modal
+// Función para abrir y cerrar el modal de configuración
 function openModal() {
     document.getElementById("settingsModal").style.display = "block";
 }
@@ -83,5 +133,5 @@ function closeModal() {
     document.getElementById("settingsModal").style.display = "none";
 }
 
-// Llamar a loadSettings() al cargar la página
+// Llamamos a la función loadSettings() cuando la página esté completamente cargada
 document.addEventListener("DOMContentLoaded", loadSettings);
