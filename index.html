@@ -67,19 +67,19 @@
                         <img src="img/creatina.jpg" alt="creatina">
                         <h3>Creatina</h3>
                         <p>€29.99</p>
-                        <button class="btn-add-cart" data-name="Producto 1" data-price="29.99">Añadir al Carrito</button>
+                        <button class="btn-add-cart" data-name="Creatina" data-price="29.99">Añadir al Carrito</button>
                     </div>
                     <div class="product">
                         <img src="img/proteina.jpg" alt="proteina">
                         <h3>Proteina</h3>
                         <p>€39.99</p>
-                        <button class="btn-add-cart" data-name="Producto 2" data-price="39.99">Añadir al Carrito</button>
+                        <button class="btn-add-cart" data-name="Proteina" data-price="39.99">Añadir al Carrito</button>
                     </div>
                     <div class="product">
                         <img src="img/ashwagandha.jpg" alt="ashwagandha">
                         <h3>Ashwagandha</h3>
                         <p>€19.99</p>
-                        <button class="btn-add-cart" data-name="Producto 3" data-price="19.99">Añadir al Carrito</button>
+                        <button class="btn-add-cart" data-name="Ashwagandha" data-price="19.99">Añadir al Carrito</button>
                     </div>
                 </div>
             </div>
@@ -129,6 +129,9 @@
     <script src="scripts/script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Limpiar el carrito al cargar la página
+            localStorage.removeItem('cart');
+
             const addCartButtons = document.querySelectorAll('.btn-add-cart');
 
             addCartButtons.forEach(button => {
