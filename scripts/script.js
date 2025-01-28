@@ -1,71 +1,87 @@
-// Referencias globales
-const settingsModal = document.getElementById("settingsModal");
-const flag = document.getElementById("flag");
 const languageAbbr = document.getElementById("language-abbr");
+const flag = document.getElementById("flag");
 const currencySpan = document.querySelector(".currency");
-const productPrices = document.querySelectorAll("[id$='-price']"); // Selecciona los precios con IDs que terminan en "-price"
 
-// Datos de configuración
-const currencies = {
-    usd: { symbol: "$", conversionRate: 1.1 }, // Conversión USD a EUR
-    eur: { symbol: "€", conversionRate: 1 },   // EUR como base
-    gbp: { symbol: "£", conversionRate: 0.85 } // Conversión GBP a EUR
-};
-
+// Definición de idiomas y monedas disponibles
 const languages = {
-    en: { abbr: "EN", flag: "img/usa.jpg" },
+    en: { abbr: "US", flag: "img/EEUU.png" },
     es: { abbr: "ES", flag: "img/españa.jpg" },
-    fr: { abbr: "FR", flag: "img/francia.jpg" }
+    fr: { abbr: "FR", flag: "img/francia.png" },
 };
 
-// Abrir el modal de configuración
-function openModal() {
-    settingsModal.style.display = "block";
-}
+const currencies = {
+    usd: { symbol: "$", conversionRate: 1 },
+    eur: { symbol: "€", conversionRate: 0.9 },
+    gbp: { symbol: "£", conversionRate: 0.75 },
+};
 
-// Cerrar el modal de configuración
-function closeModal() {
-    settingsModal.style.display = "none";
-}
-
-// Guardar configuraciones seleccionadas
+// Guardar configuraciones en localStorage
 function saveSettings() {
-    // Obtener valores seleccionados
     const selectedLanguage = document.getElementById("language").value;
     const selectedCurrency = document.getElementById("currency").value;
 
-    // Actualizar idioma y bandera
+    // Guardar las configuraciones seleccionadas en localStorage
+    localStorage.setItem("language", selectedLanguage);
+    localStorage.setItem("currency", selectedCurrency);
+
+    // Actualizar idioma, bandera y moneda
     if (languages[selectedLanguage]) {
         const { abbr, flag: flagSrc } = languages[selectedLanguage];
         languageAbbr.textContent = abbr;
         flag.src = flagSrc;
     }
 
-    // Actualizar moneda y precios
     if (currencies[selectedCurrency]) {
         const { symbol, conversionRate } = currencies[selectedCurrency];
         currencySpan.textContent = symbol;
         updateProductPrices(conversionRate, symbol);
     }
 
-    // Cerrar el modal después de guardar
+    // Cerrar modal
     closeModal();
 }
 
-// Actualizar precios de los productos
-function updateProductPrices(conversionRate, symbol) {
-    // Precios originales en EUR
-    const originalPrices = [29.99, 39.99, 49.99]; // Mismos precios que en el HTML
+// Cargar configuraciones desde localStorage al cargar la página
+function loadSettings() {
+    const savedLanguage = localStorage.getItem("language") || "es"; // Idioma por defecto: español
+    const savedCurrency = localStorage.getItem("currency") || "eur"; // Moneda por defecto: euro
 
-    productPrices.forEach((priceElement, index) => {
-        const convertedPrice = (originalPrices[index] * conversionRate).toFixed(2);
-        priceElement.textContent = `${symbol}${convertedPrice}`;
+    // Establecer valores en el modal
+    document.getElementById("language").value = savedLanguage;
+    document.getElementById("currency").value = savedCurrency;
+
+    // Aplicar configuraciones guardadas
+    if (languages[savedLanguage]) {
+        const { abbr, flag: flagSrc } = languages[savedLanguage];
+        languageAbbr.textContent = abbr;
+        flag.src = flagSrc;
+    }
+
+    if (currencies[savedCurrency]) {
+        const { symbol, conversionRate } = currencies[savedCurrency];
+        currencySpan.textContent = symbol;
+        updateProductPrices(conversionRate, symbol);
+    }
+}
+
+// Actualizar precios de productos
+function updateProductPrices(conversionRate, symbol) {
+    const productPrices = document.querySelectorAll(".product-price");
+    productPrices.forEach((price) => {
+        const basePrice = parseFloat(price.getAttribute("data-base-price"));
+        const convertedPrice = (basePrice * conversionRate).toFixed(2);
+        price.textContent = `${symbol}${convertedPrice}`;
     });
 }
 
-// Cerrar el modal si se hace clic fuera de él
-window.onclick = function(event) {
-    if (event.target === settingsModal) {
-        closeModal();
-    }
-};
+// Abrir y cerrar el modal
+function openModal() {
+    document.getElementById("settingsModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("settingsModal").style.display = "none";
+}
+
+// Llamar a loadSettings() al cargar la página
+document.addEventListener("DOMContentLoaded", loadSettings);
