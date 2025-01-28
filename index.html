@@ -58,10 +58,10 @@
 
     <!-- Sección Principal -->
     <main>
-        <!-- Productos -->
+        <!-- Productos Destacados -->
         <section class="productos">
             <div class="container">
-                <h2>Productos</h2>
+                <h2>Productos Destacados</h2>
                 <div class="product-list">
                     <div class="product">
                         <img src="img/creatina.jpg" alt="creatina">
@@ -129,9 +129,6 @@
     <script src="scripts/script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Limpiar el carrito al cargar la página
-            localStorage.removeItem('cart');
-
             const addCartButtons = document.querySelectorAll('.btn-add-cart');
 
             addCartButtons.forEach(button => {
