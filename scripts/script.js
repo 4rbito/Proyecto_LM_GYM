@@ -24,6 +24,9 @@ function saveSettings() {
     } else if (country === 'fr') {
         flag.src = 'img/francia.png';
         languageAbbr.textContent = 'FR';
+    } else if (country === 'PE') {
+        flag.src = 'img/PERU.png';
+        languageAbbr.textContent = 'PE';
     }
 
     // Update text content based on language
