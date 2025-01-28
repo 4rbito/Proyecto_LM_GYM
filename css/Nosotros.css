@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: grey; /* Gris claro para el fondo */
+  background-color: #f0f0f0; /* Fondo gris claro */
   color: #333; /* Gris oscuro para el texto */
 }
 
@@ -16,9 +16,11 @@ body {
   padding: 0.5rem 0;
   border-bottom: 1px solid #ddd;
 }
-.top-bar:hover{
+
+.top-bar:hover {
   color: #ff0000;
 }
+
 .top-bar .container {
   display: flex;
   justify-content: flex-end;
@@ -98,9 +100,10 @@ body {
   margin-left: 1rem;
   color: #fff; /* Blanco para el texto */
 }
+
 .header-right .account:hover,
 .header-right .cart:hover {
-  color: #ff0000; /* Blanco para el texto */
+  color: #ff0000; /* Rojo */
 }
 
 .header-right .icon {
@@ -137,6 +140,7 @@ body {
   color: #fff; /* Blanco para el texto */
   text-decoration: none;
 }
+
 .navigation ul li a:hover {
   background-color: #555; /* Fondo más oscuro al pasar el cursor */
   color: #fff; /* Blanco para el texto */
@@ -144,68 +148,65 @@ body {
   padding: 0.3rem 0.5rem; /* Espaciado visual */
 }
 
-
-.hero {
-  background: url('../img/hero.jpg') no-repeat center center/cover;
-  color: #fff; /* Blanco para el texto */
-  text-align: center;
-  padding: 4rem 0;
-}
-
-.hero .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.hero h2 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.hero p {
-  font-size: 1.5rem;
-}
-
-.btn {
-  background-color: #ff0000; /* Rojo */
-  color: #fff; /* Blanco para el texto */
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 1rem;
-}
-
-.products {
+.quienes-somos {
+  background-color: #f9f9f9; /* Fondo gris claro */
   padding: 2rem 0;
+  text-align: center;
 }
 
-.products .container {
+.quienes-somos .container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.products h2 {
-  text-align: center;
+.quienes-somos h2 {
+  font-size: 2.5rem;
+  color: #333; /* Gris oscuro */
+  margin-bottom: 1rem;
+}
+
+.quienes-somos p {
+  font-size: 1.2rem;
+  color: #666; /* Gris medio */
+  line-height: 1.6;
   margin-bottom: 2rem;
 }
 
-.product-grid {
+.quienes-somos .team {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.product {
-  text-align: center;
+.quienes-somos .team-member {
   background-color: #fff; /* Blanco */
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: center;
 }
 
-.product img {
-  max-width: 100%;
-  height: auto;
+.quienes-somos .team-member img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.quienes-somos .team-member h3 {
+  font-size: 1.5rem;
+  color: #333; /* Gris oscuro */
+  margin-bottom: 0.5rem;
+}
+
+.quienes-somos .team-member p {
+  font-size: 1rem;
+  color: #666; /* Gris medio */
+  line-height: 1.4;
 }
 
 footer {
@@ -267,64 +268,4 @@ footer {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-}
-.quienes-somos {
-  background-color: #f9f9f9; /* Fondo gris claro */
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.quienes-somos .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.quienes-somos h2 {
-  font-size: 2.5rem;
-  color: #333; /* Gris oscuro */
-  margin-bottom: 1rem;
-}
-
-.quienes-somos p {
-  font-size: 1.2rem;
-  color: #666; /* Gris medio */
-  line-height: 1.6;
-  margin-bottom: 2rem;
-}
-
-.quienes-somos .team {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.quienes-somos .team-member {
-  background-color: #fff; /* Blanco */
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 1rem;
-  flex: 1 1 300px;
-  max-width: 300px;
-  text-align: center;
-}
-
-.quienes-somos .team-member img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-.quienes-somos .team-member h3 {
-  font-size: 1.5rem;
-  color: #333; /* Gris oscuro */
-  margin-bottom: 0.5rem;
-}
-
-.quienes-somos .team-member p {
-  font-size: 1rem;
-  color: #666; /* Gris medio */
-  line-height: 1.4;
 }
