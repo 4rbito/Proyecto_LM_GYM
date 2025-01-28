@@ -16,7 +16,9 @@ body {
    padding: 0.5rem 0;
    border-bottom: 1px solid #ddd;
 }
-
+.top-bar:hover{
+   color: #ff0000;
+}
 .top-bar .container {
    display: flex;
    justify-content: flex-end;
@@ -91,9 +93,14 @@ body {
 .header-right .account,
 .header-right .cart {
    display: flex;
+   text-decoration: none;
    align-items: center;
    margin-left: 1rem;
    color: #fff; /* Blanco para el texto */
+}
+.header-right .account:hover,
+.header-right .cart:hover {
+   color: #ff0000; /* Blanco para el texto */
 }
 
 .header-right .icon {
@@ -130,6 +137,13 @@ body {
    color: #fff; /* Blanco para el texto */
    text-decoration: none;
 }
+.navigation ul li a:hover {
+   background-color: #555; /* Fondo más oscuro al pasar el cursor */
+   color: #fff; /* Blanco para el texto */
+   border-radius: 5px;
+   padding: 0.3rem 0.5rem; /* Espaciado visual */
+}
+
 
 .hero {
    background: url('../img/hero.jpg') no-repeat center center/cover;

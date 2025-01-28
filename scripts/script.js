@@ -85,7 +85,7 @@ function updateLanguage(language) {
     }
 }
 
-function updatePrices(currency) {
+function updatePrices(products) {
     const prices = {
         'usd': ['$29.99', '$39.99', '$49.99'],
         'eur': ['€29.99', '€39.99', '€49.99'],
@@ -97,15 +97,24 @@ function updatePrices(currency) {
     document.getElementById('product2-price').textContent = productPrices[1];
     document.getElementById('product3-price').textContent = productPrices[2];
 }
-
+/*
 function updateCurrencySymbol(currency) {
     const currencySpan = document.getElementById('currency');
-    if (currency === 'usd') {
+    if (currency == 'usd') {
         currencySpan.textContent = '$';
-    } else if (currency === 'eur') {
+    } else if (currency == 'eur') {
         currencySpan.textContent = '€';
-    } else if (currency === 'gbp') {
+    } else if (currency == 'gbp') {
         currencySpan.textContent = '£';
+    }
+}*/
+function updateCurrencySymbol(currency) {
+    if (currency === '$ USD') {
+        document.getElementById('currency').textContent = '$';
+    } else if (currency === '€ EUR') {
+        document.getElementById('currency').textContent = '€';
+    } else if (currency === '£ GBP') {
+        document.getElementById('currency').textContent = '£';
     }
 }
 
