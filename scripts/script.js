@@ -1,4 +1,3 @@
-// Definimos los textos en diferentes idiomas
 const languages = {
     en: { abbr: "US", flag: "img/EEUU.png", texts: {
         "site-title": "AlphaStrength",
@@ -12,8 +11,8 @@ const languages = {
         "productos-link": "Products",
         "about-link": "About Us",
         "contact-link": "Contact",
-        "account-text": "Account",      // Traducción para "Cuenta"
-        "cart-text": "Cart"             // Traducción para "Cesta"
+        "account-text": "Account",
+        "cart-text": "Cart"
     }},
     es: { abbr: "ES", flag: "img/españa.jpg", texts: {
         "site-title": "AlphaStrength",
@@ -27,8 +26,8 @@ const languages = {
         "productos-link": "Productos",
         "about-link": "Acerca de",
         "contact-link": "Contacto",
-        "account-text": "Cuenta",        // Traducción para "Cuenta"
-        "cart-text": "Cesta"             // Traducción para "Cesta"
+        "account-text": "Cuenta",
+        "cart-text": "Cesta"
     }},
     fr: { abbr: "FR", flag: "img/francia.png", texts: {
         "site-title": "AlphaStrength",
@@ -42,10 +41,12 @@ const languages = {
         "productos-link": "Produits",
         "about-link": "À propos",
         "contact-link": "Contact",
-        "account-text": "Compte",        // Traducción para "Cuenta"
-        "cart-text": "Panier"            // Traducción para "Cesta"
+        "account-text": "Compte",
+        "cart-text": "Panier"
     }},
 };
+
+
 
 // Definimos las monedas y sus tasas de conversión
 const currencies = {
@@ -54,7 +55,6 @@ const currencies = {
     gbp: { symbol: "£", conversionRate: 0.75 },
 };
 
-// Función para guardar la configuración en localStorage
 function saveSettings() {
     const selectedLanguage = document.getElementById("language").value;
     const selectedCurrency = document.getElementById("currency").value;
@@ -85,30 +85,19 @@ function updateContent(language, currency) {
     // Actualizamos el idioma
     document.getElementById("language-abbr").textContent = selectedLanguage.abbr;
     document.getElementById("flag").src = selectedLanguage.flag;
-    document.getElementById("currency-symbol").textContent = selectedCurrency.symbol;
 
     // Actualizamos los textos de la navegación
     document.getElementById("home-link").textContent = selectedLanguage.texts["home-link"];
     document.getElementById("productos-link").textContent = selectedLanguage.texts["productos-link"];
     document.getElementById("about-link").textContent = selectedLanguage.texts["about-link"];
     document.getElementById("contact-link").textContent = selectedLanguage.texts["contact-link"];
-
-    // Actualizamos el contenido principal
-    document.getElementById("site-title").textContent = selectedLanguage.texts["site-title"];
-    document.getElementById("hero-title").textContent = selectedLanguage.texts["hero-title"];
-    document.getElementById("hero-description").textContent = selectedLanguage.texts["hero-description"];
-    document.getElementById("featured-products-title").textContent = selectedLanguage.texts["featured-products-title"];
-    document.getElementById("product1-title").textContent = selectedLanguage.texts["product1-title"];
-    document.getElementById("product2-title").textContent = selectedLanguage.texts["product2-title"];
-    document.getElementById("product3-title").textContent = selectedLanguage.texts["product3-title"];
-
-    // Actualizamos los textos del header-right
     document.getElementById("account-text").textContent = selectedLanguage.texts["account-text"];
     document.getElementById("cart-text").textContent = selectedLanguage.texts["cart-text"];
 
     // Actualizamos la moneda y los precios
     updateProductPrices(selectedCurrency.conversionRate, selectedCurrency.symbol);
 }
+
 
 // Función para actualizar los precios de los productos
 function updateProductPrices(conversionRate, symbol) {
