@@ -3,7 +3,7 @@ body {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   background-color: #f0f0f0; /* Fondo gris claro */
+   background-color: grey; /* Fondo gris claro */
    color: #333; /* Gris oscuro para el texto */
  }
  
@@ -219,6 +219,8 @@ body {
    color: #fff; /* Blanco para el texto */
    text-align: center;
    padding: 1rem 0;
+   bottom: 0;
+  
  }
  
  /* Modal styles */
@@ -274,3 +276,24 @@ body {
    border: 1px solid #ccc;
    border-radius: 4px;
  }
+
+.rating {
+    color: gold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: red;
+}
+
+.discounted-price {
+    font-weight: bold;
+    color: green;
+}
+
+.offer-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
