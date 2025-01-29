@@ -405,7 +405,7 @@ body {
 .product-detail th {
   background-color: #f4f4f4;
 }
-/* Sección Principal */
+/* PRODUCTOS */
 .containerProductos {
   display: flex;
   flex-wrap: wrap;
@@ -452,4 +452,93 @@ body {
   color: #e8491d;
   font-size: 1.2em;
   margin-top: 10px;
+}
+
+/* ZUMO */
+.containerZumo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.product-detailZumo {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 60%;
+}
+
+.product-detailZumo img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-detailZumo h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+}
+
+.product-detailZumo p {
+  color: #666;
+  font-size: 1em;
+}
+
+.product-detailZumo .priceZumo {
+  color: #e8491d;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.product-detailZumo label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.product-detailZumo input[type="number"],
+.product-detailZumo select {
+  padding: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.add-to-cartZumo {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-to-cartZumo:hover {
+  background: #555;
+}
+
+.product-detailZumo table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.product-detailZumo table, .product-detailZumo th, .product-detailZumo td {
+  border: 1px solid #ddd;
+}
+
+.product-detailZumo th, .product-detailZumo td {
+  padding: 10px;
+  text-align: left;
+}
+
+.product-detailZumo th {
+  background-color: #f4f4f4;
 }
