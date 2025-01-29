@@ -49,13 +49,26 @@
         <div class="container">
             <ul>
                 <li><a href="index.html" id="home-link">Inicio</a></li>
-                <li><a href="/pag/Productos/Productos.html" id="productos-link">Productos</a></li>
+                <li><a href="pag/Productos/Productos.html" id="productos-link">Productos</a></li>
                 <li><a href="pag/Nosotros.html" id="about-link">Acerca de</a></li>
                 <li><a href="pag/Contacto.html" id="contact-link">Contacto</a></li>
             </ul>
-            <p class="offer-message">¡Ofertas disponibles hasta el 50% por un tiempo limitado!</p>
         </div>
     </nav>
+
+    <!-- Offers Section -->
+    <div class="offer-section">
+        <a href="pag/Productos/ofertas.html" class="offer-link">
+            ¡Ofertas disponibles hasta el 50% por un tiempo limitado!
+        </a>
+        <div id="countdown-timer" class="timer">
+            <div class="time-box"><span id="hours">00</span></div>
+            <div class="time-box"><span id="minutes">00</span></div>
+            <div class="time-box"><span id="seconds">00</span></div>
+        </div>
+    </div>
+
+    <script src="scripts/timer.js"></script>
 
     <!-- Sección Principal -->
     <main>
@@ -176,6 +189,7 @@
                 alert('Producto añadido al carrito');
             }
         });
+
     </script>
 </body>
 </html>
