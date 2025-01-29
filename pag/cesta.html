@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/cesta.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="../img/Alpha_strenght.jpg" type="image/jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Cesta</title>
@@ -14,7 +13,7 @@
     <div class="top-bar">
         <div class="container">
             <div class="settings" onclick="openModal()">
-                <img id="flag" src="../img/españa.jpg" alt="ES" class="flag">
+                <img id="flag" src="/img/españa.jpg" alt="ES" class="flag">
                 <span id="language-abbr">ES</span>
                 <span class="currency">€</span>
             </div>
@@ -61,9 +60,9 @@
     <main>
         <!-- Cesta -->
         <section class="cesta">
-            <div class="container">
+            <div class="containerCesta">
                 <h2>Tu Cesta</h2>
-                <table class="cart-table">
+                <table class="cart-tableCesta">
                     <thead>
                         <tr>
                             <th>Producto</th>
@@ -77,9 +76,9 @@
                         <!-- Los elementos del carrito se insertarán aquí -->
                     </tbody>
                 </table>
-                <div class="cart-summary">
+                <div class="cart-summaryCesta">
                     <h3>Total: <span id="cart-total">€0.00</span></h3>
-                    <button class="btn-checkout" onclick="proceedToPayment()">Proceder al Pago</button>
+                    <button class="btn-checkoutCesta" onclick="proceedToPayment()">Proceder al Pago</button>
                 </div>
             </div>
         </section>
