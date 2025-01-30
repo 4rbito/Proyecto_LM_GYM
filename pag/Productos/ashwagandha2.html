@@ -127,9 +127,9 @@
     <script>
         function addToCart(productName, productPrice) {
             const quantity = document.getElementById('quantity').value;
-            const flavor = document.getElementById('flavor').value;
+           
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart.push({ name: productName, price: productPrice, quantity: quantity, flavor: flavor });
+            cart.push({ name: productName, price: productPrice, quantity: quantity });
             localStorage.setItem('cart', JSON.stringify(cart));
             alert(`${quantity} x ${productName} (${flavor}) ha sido añadido a la cesta.`);
         }
