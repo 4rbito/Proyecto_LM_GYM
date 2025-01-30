@@ -9,17 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Barra Superior -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="settings" onclick="openModal()">
-                <img id="flag" src="/img/españa.jpg" alt="ES" class="flag">
-                <span id="language-abbr">ES</span>
-                <span class="currency-symbol">€</span>
-            </div>
-        </div>
-    </div>
-
     <!-- Encabezado -->
     <header class="header">
         <div class="container">
@@ -62,7 +51,7 @@
         <div class="containerProductos">
             <div class="products1">
                 <div class="product">
-                    <a href="/pag/Productos/creatina2.html">
+                    <a href="/pag/Productos/Multivitaminico.html">
                         <img src="/img/pixlr-image-generator-edd828d4-2a6e-4a8c-bd86-b5eb0f1282af.png" alt="Creatina">
                         <h3>Multivitaminico</h3>
                         <div class="rating">
@@ -74,10 +63,10 @@
                         </div>
                         <p class="price">€29,99</p>
                     </a>
-                    <button class="btn-add-cart" data-name="Creatina" data-price="24.99">Añadir al Carrito</button>
+                    <button class="add-to-cartMultivitaminico" onclick="addToCart('Multivitaminico', 29.99)">Añadir a la Cesta</button>
                 </div>
                 <div class="product">
-                    <a href="/pag/Productos/creatina2.html">
+                    <a href="/pag/Productos/ZumoVitaminico.html">
                         <img src="/img/pixlr-image-generator-ac9b5bb9-26f4-41f6-a4cc-a985c69903fd.png" alt="Creatina">
                         <h3>Zumo Vitaminico</h3>
                         <div class="rating">
@@ -89,10 +78,10 @@
                         </div>
                         <p class="price">€29,99</p>
                     </a>
-                    <button class="btn-add-cart" data-name="Creatina" data-price="24.99">Añadir al Carrito</button>
+                    <button class="add-to-cartZumo" onclick="addToCart('Zumo Vitaminico', 5.00)">Añadir a la Cesta</button>
                 </div>
                 <div class="product">
-                    <a href="/pag/Productos/creatina2.html">
+                    <a href="/pag/Productos/galletas.html">
                         <img src="/img/pixlr-image-generator-74552e20-3a37-4255-8b3f-8cfe0d0b9926.png" alt="Creatina">
                         <h3>Galletas</h3>
                         <div class="rating">
@@ -104,10 +93,10 @@
                         </div>
                         <p class="price">€29,99</p>
                     </a>
-                    <button class="btn-add-cart" data-name="Creatina" data-price="24.99">Añadir al Carrito</button>
+                    <button class="add-to-cartGalletas" onclick="addToCart('Galletas', 5.00)">Añadir a la Cesta</button>
                 </div>
                 <div class="product">
-                    <a href="/pag/Productos/creatina2.html">
+                    <a href="/pag/Productos/Creatina.html">
                         <img src="/img/creatina.jpg" alt="Creatina">
                         <h3>Creatina</h3>
                         <div class="rating">
@@ -119,10 +108,10 @@
                         </div>
                         <p class="price">€29,99</p>
                     </a>
-                    <button class="btn-add-cart" data-name="Creatina" data-price="24.99">Añadir al Carrito</button>
+                    <button class="add-to-cartCreatina" onclick="addToCart('Creatina', 5.00)">Añadir a la Cesta</button>
                 </div>
                 <div class="product">
-                    <a href="/pag/Productos/creatina2.html">
+                    <a href="/pag/Productos/Ashwagandha.html">
                         <img src="/img/ashwagandha.jpg" alt="Creatina">
                         <h3>Ashwagandha</h3>
                         <div class="rating">
@@ -134,10 +123,10 @@
                         </div>
                         <p class="price">€29,99</p>
                     </a>
-                    <button class="btn-add-cart" data-name="Creatina" data-price="24.99">Añadir al Carrito</button>
+                    <button class="add-to-cartAshwagandha" onclick="addToCart('Ashwagandha', 5.00)">Añadir a la Cesta</button>
                 </div>
                 <div class="product">
-                    <a href="/pag/Productos/creatina2.html">
+                    <a href="/pag/Productos/Proteina.html">
                         <img src="/img/proteina.jpg" alt="Creatina">
                         <h3>Proteina</h3>
                         <div class="rating">
@@ -149,7 +138,7 @@
                         </div>
                         <p class="price">€29,99</p>
                     </a>
-                    <button class="btn-add-cart" data-name="Creatina" data-price="24.99">Añadir al Carrito</button>
+                    <button class="add-to-cartProteina" onclick="addToCart('Proteina', 5.00)">Añadir a la Cesta</button>
                 </div>
                 <div class="product">
                     <a href="/pag/Productos/BarritasEnergeticas.html">
@@ -164,7 +153,7 @@
                         </div>
                         <p class="price">€29,99</p>
                     </a>
-                    <button class="btn-add-cart" data-name="Creatina" data-price="24.99">Añadir al Carrito</button>
+                    <button class="add-to-cartBarritaEnergetica" onclick="addToCart('BarritasEnergeticas', 5.00)">Añadir a la Cesta</button>
                 </div>
                 <div class="product">
                     <a href="/pag/Productos/creatina2.html">
