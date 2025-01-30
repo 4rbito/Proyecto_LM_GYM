@@ -11,21 +11,6 @@ body {
    padding: 0 1rem;
  }
  
- .top-bar {
-   background-color: #333; /* Negro */
-   padding: 0.5rem 0;
-   
- }
- 
- .top-bar:hover {
-   color: #ff0000;
- }
- 
- .top-bar .container {
-   display: flex;
-   justify-content: flex-end;
-   align-items: center;
- }
  
  .settings {
    display: flex;
