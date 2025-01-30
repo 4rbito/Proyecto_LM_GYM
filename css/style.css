@@ -196,7 +196,24 @@ body {
   font-size: 1.5rem;
   color: red;
 }
+/* Asegúrate de que estos selectores sean lo suficientemente específicos */
+.product a {
+  text-decoration: none !important; /* Usa !important si es necesario */
+  color: inherit;
+}
 
+.rating i {
+  text-decoration: none !important;
+}
+
+.product p {
+  text-decoration: none !important;
+}
+
+.product .original-price,
+.product .discounted-price {
+  text-decoration: none !important;
+}
  .btn-add-cart {
    background-color: #ff0000; /* Rojo */
    color: #fff; /* Blanco para el texto */
