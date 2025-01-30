@@ -4,22 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/contacto.css">
     <link rel="icon" href="../img/Alpha_strenght.jpg" type="image/jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Contacto</title>
 </head>
 <body>
-    <!-- Barra Superior -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="settings" onclick="openModal()">
-                <img id="flag" src="../img/españa.jpg" alt="ES" class="flag">
-                <span id="language-abbr">ES</span>
-                <span class="currency">€</span>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- Encabezado -->
     <header class="header">
@@ -113,39 +103,6 @@
         </div>
     </footer>
 
-    <!-- Modal de Configuración -->
-    <div id="settingsModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Configuración</h2>
-            <div class="modal-section">
-                <label for="language">Idioma:</label>
-                <select id="language">
-                    <option value="en">English</option>
-                    <option value="es" selected>Español</option>
-                    <option value="fr">Français</option>
-                </select>
-            </div>
-            <div class="modal-section">
-                <label for="country">País:</label>
-                <select id="country">
-                    <option value="us">Estados Unidos</option>
-                    <option value="es" selected>España</option>
-                    <option value="fr">Francia</option>
-                </select>
-            </div>
-            <div class="modal-section">
-                <label for="currency">Moneda:</label>
-                <select id="currency">
-                    <option value="usd">$ USD</option>
-                    <option value="eur" selected>€ EUR</option>
-                    <option value="gbp">£ GBP</option>
-                </select>
-            </div>
-            <button onclick="saveSettings()">Guardar</button>
-        </div>
-    </div>
-
-    <script src="../scripts/script.js"></script>
+    
 </body>
 </html>

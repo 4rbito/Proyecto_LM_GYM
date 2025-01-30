@@ -905,3 +905,254 @@ body {
 .stars i {
   margin-right: 5px;
 }
+/* Nosotros */
+.nosotros {
+  padding: 50px 0;
+}
+
+.nosotros h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nosotros p {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.nosotros .team {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nosotros .team-member {
+  text-align: center;
+  max-width: 200px;
+  flex: 1;
+}
+
+.nosotros .team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+/* Contacto */
+.contacto {
+  background-color: #e0e0e0; /* Fondo gris */
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.contacto .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contacto h2 {
+  font-size: 2.5rem;
+  color: #333; /* Gris oscuro */
+  margin-bottom: 1rem;
+}
+
+.contacto p {
+  font-size: 1.2rem;
+  color: #666; /* Gris medio */
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: #ff0000; /* Rojo */
+  color: #fff; /* Blanco para el texto */
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #cc0000; /* Rojo más oscuro */
+}
+
+.equipo {
+  background-color: #fff; /* Blanco */
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.equipo .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.equipo h2 {
+  font-size: 2.5rem;
+  color: #333; /* Gris oscuro */
+  margin-bottom: 1rem;
+}
+
+.team-member {
+  display: inline-block;
+  width: 30%;
+  margin: 1rem;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  color: #333; /* Gris oscuro */
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #666; /* Gris medio */
+}
+/* cuenta*/
+.cuenta {
+  background-color: #e0e0e0; /* Fondo gris */
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.cuenta .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cuenta h2 {
+  font-size: 2.5rem;
+  color: #333; /* Gris oscuro */
+  margin-bottom: 1rem;
+}
+
+.account-forms {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.form-container {
+  background-color: #fff; /* Blanco */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  flex: 1 1 300px;
+  max-width: 400px;
+  text-align: left;
+}
+
+.form-container h3 {
+  font-size: 1.8rem;
+  color: #333; /* Gris oscuro */
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: #ff0000; /* Rojo */
+  color: #fff; /* Blanco para el texto */
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #cc0000; /* Rojo más oscuro */
+}
+/* Pago */
+.pago {
+  background-color: #e0e0e0; /* Fondo gris */
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.pago .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pago h2 {
+  font-size: 2.5rem;
+  color: #333; /* Gris oscuro */
+  margin-bottom: 1rem;
+}
+
+.pago .form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.pago .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.pago .form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.pago .btn {
+  background-color: #ff0000; /* Rojo */
+  color: #fff; /* Blanco para el texto */
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pago .btn:hover {
+  background-color: #cc0000; /* Rojo más oscuro */
+}
