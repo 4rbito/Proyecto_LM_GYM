@@ -176,6 +176,8 @@ body {
 .next-btn {
   right: 10px;
 }
+
+/* Productos */
  .productos {
    background-color: #e0e0e0; /* Fondo gris */
    padding: 2rem 0;
@@ -1200,3 +1202,289 @@ body {
 .pago .btn:hover {
   background-color: #cc0000; /* Rojo más oscuro */
 }
+
+/* Ashwagandha */
+.containerAshwagandha {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.product-detailAshwagandha {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 60%;
+}
+
+.product-detailAshwagandha img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-detailAshwagandha h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+}
+
+.product-detailAshwagandha p {
+  color: #666;
+  font-size: 1em;
+}
+
+.product-detailAshwagandha .priceAshwagandha {
+  color: #e8491d;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.product-detailAshwagandha label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.product-detailAshwagandha input[type="number"] {
+  padding: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.add-to-cartAshwagandha {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-to-cartAshwagandha:hover {
+  background: #555;
+}
+
+.product-detailAshwagandha table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.product-detailAshwagandha table, .product-detailAshwagandha th, .product-detailAshwagandha td {
+  border: 1px solid #ddd;
+}
+
+.product-detailAshwagandha th, .product-detailAshwagandha td {
+  padding: 10px;
+  text-align: left;
+}
+
+.product-detailAshwagandha th {
+  background-color: #f4f4f4;
+}
+
+
+  /* Barrita energetica */
+.containerBarritaEnergetica {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.product-detailBarritaEnergetica {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 60%;
+}
+
+.product-detailBarritaEnergetica img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-detailBarritaEnergetica h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+}
+
+.product-detailBarritaEnergetica p {
+  color: #666;
+  font-size: 1em;
+}
+
+.product-detailBarritaEnergetica .priceBarritaEnergetica {
+  color: #e8491d;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.product-detailBarritaEnergetica label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.product-detailBarritaEnergetica input[type="number"],
+.product-detailBarritaEnergetica select {
+  padding: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.add-to-cartBarritaEnergetica {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-to-cartBarritaEnergetica:hover {
+  background: #555;
+}
+
+.product-detailBarritaEnergetica table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.product-detailBarritaEnergetica table, .product-detailBarritaEnergetica th, .product-detailBarritaEnergetica td {
+  border: 1px solid #ddd;
+}
+
+.product-detailBarritaEnergetica th, .product-detailBarritaEnergetica td {
+  padding: 10px;
+  text-align: left;
+}
+
+.product-detailBarritaEnergetica th {
+  background-color: #f4f4f4;
+}
+
+/* Valoraciones */
+.reviews {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.review {
+  margin-bottom: 20px;
+}
+
+.stars {
+  color: #f39c12;
+}
+
+.stars i {
+  margin-right: 5px;
+}
+
+/* Creatina */
+.containerCreatina {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.product-detailCreatina {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 60%;
+}
+
+.product-detailCreatina img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-detailCreatina h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+}
+
+.product-detailCreatina p {
+  color: #666;
+  font-size: 1em;
+}
+
+.product-detailCreatina .priceCreatina {
+  color: #e8491d;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.product-detailCreatina label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.product-detailCreatina input[type="number"],
+.product-detailCreatina select {
+  padding: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.add-to-cartCreatina {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-to-cartCreatina:hover {
+  background: #555;
+}
+
+.product-detailCreatina table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.product-detailCreatina table, .product-detailCreatina th, .product-detailCreatina td {
+  border: 1px solid #ddd;
+}
+
+.product-detailCreatina th, .product-detailCreatina td {
+  padding: 10px;
+  text-align: left;
+}
+
+.product-detailCreatina th {
+  background-color: #f4f4f4;
+}
+
