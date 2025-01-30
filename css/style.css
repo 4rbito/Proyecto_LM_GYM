@@ -1016,21 +1016,22 @@ body {
 .team-member {
   display: inline-block;
   width: 30%;
-  margin: 1rem;
-  text-align: center;
+  text-align: center; /* Centra el texto */
+  margin: 20px;
 }
 
 .team-member img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 1rem;
+  width: 150px; /* Ancho fijo */
+  height: 150px; /* Alto fijo */
+  border-radius: 50%; /* Hace que las imágenes sean circulares */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+  border: 3px solid #ff0000; /* Borde rojo (opcional) */
 }
 
 .team-member h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #333; /* Gris oscuro */
-  margin-bottom: 0.5rem;
+  margin-top: 10px;
 }
 
 .team-member p {
