@@ -1454,3 +1454,71 @@ body {
   background-color: #f4f4f4;
 }
 
+/* Menú Extensible */
+.menu-extensible {
+  width: 200px;
+  background: #ff0000;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  margin-top: 0%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.menu-extensible h3 {
+  margin-top: 0;
+}
+
+.menu-btn {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.menu-btn:hover {
+  background: #555;
+}
+
+.menu-content {
+  display: none;
+  margin-top: 10px;
+}
+
+.menu-content a {
+  display: block;
+  padding: 10px;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.menu-content a:hover {
+  background: #ddd;
+}
+
+/* Ajustes para el contenedor de productos */
+.containerProductos {
+  display: flex;
+  margin-left: 220px; /* Ajustar el margen izquierdo para dejar espacio para el menú */
+}
+
+.products1 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
