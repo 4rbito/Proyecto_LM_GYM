@@ -46,20 +46,22 @@
         </div>
     </nav>
 
+     <!-- Menú Desplegable para Móviles -->
+     <div class="mobile-menu">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰ Menú</button>
+        <div id="mobile-menu-content" class="mobile-menu-content">
+            <a href="/index.html">Inicio</a>
+            <a href="/pag/Productos/Productos.html">Productos</a>
+            <a href="/pag/Nosotros.html">Acerca de</a>
+            <a href="/pag/Contacto.html">Contacto</a>
+            <a href="/pag/ofertas.html">Ofertas</a>
+        </div>
+    </div>
+
     <!-- Sección Principal -->
     <main>
         <div class="containerProductos">
-                        <!-- Filtros -->
-                         <!-- Menú Extensible -->
-            <aside class="menu-extensible">
-                <h3>Menú</h3>
-                <button class="menu-btn" onclick="toggleMenu()">☰ Categorías</button>
-                <div id="menu-content" class="menu-content">
-                    <a href="/index.html">Proteína</a>
-                    <a href="/index.html">Vitaminas</a>
-                    <a href="/index.html">Accesorios</a>
-                </div>
-            </aside>
+                       
                         <!-- Productos -->
             <div class="products1">
                 <div class="product">
@@ -602,6 +604,15 @@
     } else {
         menuContent.style.display = 'block';
     }
+}
+
+function toggleMobileMenu() {
+var menuContent = document.getElementById('mobile-menu-content');
+if (menuContent.style.display === 'block') {
+   menuContent.style.display = 'none';
+} else {
+   menuContent.style.display = 'block';
+}
 }
     </script>
 

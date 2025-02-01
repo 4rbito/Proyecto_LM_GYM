@@ -1508,8 +1508,92 @@ footer {
   .navigation {
       display: none;
   }
+  .header-left .NombreMarca {
+      display: none;
+  }
 
   .mobile-menu {
       display: block;
   }
+
+/* Ajustes para el encabezado */
+.header {
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-left, .header-center, .header-right {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.search-bar {
+  width: 80%;
+}
+
+/* Ajustes para la navegación */
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation ul li {
+  margin-bottom: 10px;
+}
+
+/* Ajustes para el menú extensible */
+.menu-extensible {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.containerProductos {
+  flex-direction: column;
+  margin-left: 0;
+}
+
+.products1 {
+  width: 100%;
+  justify-content: center;
+}
+
+.product {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+/* Ajustes para el pie de página */
+footer .container {
+  text-align: center;
+}
+}
+
+/* Estilos específicos para dispositivos muy pequeños */
+@media (max-width: 480px) {
+.header h1 {
+  font-size: 1.5em;
+}
+
+.search-bar {
+  width: 90%;
+}
+
+.menu-btn {
+  font-size: 1.2em;
+}
+
+.product img {
+  width: 100%;
+}
+
+.product h3 {
+  font-size: 1.2em;
+}
+
+.product .price {
+  font-size: 1.2em;
+}
 }

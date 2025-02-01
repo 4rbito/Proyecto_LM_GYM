@@ -48,6 +48,18 @@
         </div>
     </nav>
 
+     <!-- Menú Desplegable para Móviles -->
+     <div class="mobile-menu">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰ Menú</button>
+        <div id="mobile-menu-content" class="mobile-menu-content">
+            <a href="/index.html">Inicio</a>
+            <a href="/pag/Productos/Productos.html">Productos</a>
+            <a href="/pag/Nosotros.html">Acerca de</a>
+            <a href="/pag/Contacto.html">Contacto</a>
+            <a href="/pag/ofertas.html">Ofertas</a>
+        </div>
+    </div>
+
     <!-- Sección Principal -->
     <main>
         <!-- Contacto -->
@@ -103,6 +115,16 @@
         </div>
     </footer>
 
+    <script>
+        function toggleMobileMenu() {
+   var menuContent = document.getElementById('mobile-menu-content');
+   if (menuContent.style.display === 'block') {
+       menuContent.style.display = 'none';
+   } else {
+       menuContent.style.display = 'block';
+   }
+}
+   </script>
     
 </body>
 </html>
