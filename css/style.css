@@ -272,13 +272,102 @@ body {
   background-color: #cc0000; /* Rojo más oscuro */
 }
 
-footer {
-  background-color: #333; /* Negro */
-  color: #fff; /* Blanco para el texto */
+/* Pie de Página */
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.footer-section p, .footer-section ul, .footer-section form {
+  margin: 10px 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ddd;
+}
+
+.footer-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section form input[type="email"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-section form button {
+  padding: 10px;
+  background: #e8491d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-section form button:hover {
+  background: #d73814;
+}
+
+.footer-bottom {
   text-align: center;
-  padding: 1rem 0;
-  bottom: 0;
- 
+  width: 100%;
+  margin-top: 20px;
 }
 
 /* Modal styles */
@@ -1349,6 +1438,7 @@ footer {
 
 /* Valoraciones Productos */
 .reviews {
+  margin-bottom: 30px;
  margin-top: 20px;
  text-align: left;
 }
@@ -1566,7 +1656,18 @@ footer {
 }
 
 /* Ajustes para el pie de página */
-footer .container {
+.footer .container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-sections {
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-section {
+  width: 100%;
   text-align: center;
 }
 }
