@@ -16,7 +16,7 @@
         <div class="container">
             <div class="header-left">
                 <img src="img/Alpha_strenght.jpg" alt="AlphaStrength Logo" class="logo">
-                <h1>AlphaStrength</h1>
+                <h1 class="NombreMarca">AlphaStrength</h1>
             </div>
             <div class="header-center">
                 <input type="text" placeholder="Buscar..." class="search-bar">
@@ -48,6 +48,18 @@
             </ul>
         </div>
     </nav>
+        <!-- Menú Desplegable para Móviles -->
+        <div class="mobile-menu">
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰ Menú</button>
+            <div id="mobile-menu-content" class="mobile-menu-content">
+                <a href="/index.html">Inicio</a>
+                <a href="/pag/Productos/Productos.html">Productos</a>
+                <a href="/pag/Nosotros.html">Acerca de</a>
+                <a href="/pag/Contacto.html">Contacto</a>
+                <a href="/pag/ofertas.html">Ofertas</a>
+            </div>
+        </div>
+    
 
     <!-- Offers Section -->
     <div class="offer-section">
@@ -169,6 +181,14 @@
                 alert('Producto añadido al carrito');
             }
         });
+        function toggleMobileMenu() {
+    var menuContent = document.getElementById('mobile-menu-content');
+    if (menuContent.style.display === 'block') {
+        menuContent.style.display = 'none';
+    } else {
+        menuContent.style.display = 'block';
+    }
+}
 
     </script>
     <script src="scripts/carousel.js"></script>
