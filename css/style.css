@@ -134,47 +134,59 @@ body {
 }
 /* Estilos del Carrusel */
 .carousel {
- width: 100%;
- overflow: hidden;
- position: relative;
- margin-bottom: 2rem;
+  width: 100%;
+  max-width: 1200px; /* Adjust this value based on your needs */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2rem;
 }
 
 .carousel-container {
- display: flex;
- transition: transform 0.5s ease-in-out;
+  width: 100%;
+  overflow: hidden;
 }
 
 .carousel-slide {
- display: flex;
- width: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide img {
- width: 100%;
- height: auto;
- flex-shrink: 0;
+  height: 400px; /* Adjust this value based on your needs */
+  object-fit: cover;
 }
 
 .carousel-btn {
- position: absolute;
- top: 50%;
- transform: translateY(-50%);
- background-color: rgba(0, 0, 0, 0.5);
- color: white;
- border: none;
- padding: 10px;
- cursor: pointer;
- font-size: 18px;
- z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .prev-btn {
- left: 10px;
+  left: 20px;
 }
 
 .next-btn {
- right: 10px;
+  right: 20px;
 }
 
 /* Productos */

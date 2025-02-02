@@ -1,24 +1,41 @@
-let currentIndex = 0;
-const slides = document.querySelectorAll('.carousel-slide img');
-const totalSlides = slides.length;
+document.addEventListener('DOMContentLoaded', () => {
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide img');
+    const totalSlides = slides.length;
+    const slideContainer = document.querySelector('.carousel-slide');
 
-function showSlide(index) {
-    const slideWidth = slides[0].clientWidth;
-    document.querySelector('.carousel-container').style.transform = `translateX(${-slideWidth * index}px)`;
-}
+    // Set initial state
+    function initializeCarousel() {
+        // Set width of carousel-slide to accommodate all images
+        slideContainer.style.width = `${totalSlides * 100}%`;
+        
+        // Set each image width to be proportional
+        slides.forEach(slide => {
+            slide.style.width = `${100 / totalSlides}%`;
+        });
+        
+        showSlide(currentIndex);
+    }
 
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    showSlide(currentIndex);
-}
+    function showSlide(index) {
+        const offset = -index * (100 / totalSlides);
+        slideContainer.style.transform = `translateX(${offset}%)`;
+        currentIndex = index;
+    }
 
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    showSlide(currentIndex);
-}
+    window.nextSlide = function() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    };
 
-// Cambiar de imagen automáticamente cada 5 segundos
-setInterval(nextSlide, 5000);
+    window.prevSlide = function() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+    };
 
-// Mostrar la primera imagen al cargar la página
-showSlide(currentIndex);
+    // Initialize carousel
+    initializeCarousel();
+
+    // Auto advance slides
+    setInterval(nextSlide, 5000);
+});
