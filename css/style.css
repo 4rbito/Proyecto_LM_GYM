@@ -2145,6 +2145,9 @@ body {
   .mobile-menu {
       display: block;
   }
+  .containerAminoenergy img{
+    width: 200px;
+  }
 
 /* Ajustes para el encabezado */
 .header {
