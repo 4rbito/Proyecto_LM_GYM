@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="img/Alpha_strenght.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>AlphaStrength</title>
+</head>
+<body>
+  
+
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="container">
+            <div class="header-left">
+                <img src="img/Alpha_strenght.jpg" alt="AlphaStrength Logo" class="logo">
+                <h1 class="NombreMarca" >AlphaStrength</h1>
+            </div>
+            <div class="header-center">
+                <input type="text" placeholder="Buscar..." class="search-bar">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-right">
+                <a href="/pag/cesta.html" class="account">
+                    <i class="fas fa-user icon"></i>
+                    <span id="account-text">Cuenta</span>
+                </a>
+                <a href="/pag/cesta.html" class="cart">
+                    <i class="fas fa-shopping-cart icon"></i>
+                    <span id="cart-text">Cesta</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="navigation">
+        <div class="container">
+            <ul>
+                <li><a href="/index.html" id="home-link">Inicio</a></li>
+                <li><a href="/pag/Productos/Productos.html" id="productos-link">Productos</a></li>
+                <li><a href="/pag/Nosotros.html" id="about-link">Acerca de</a></li>
+                <li><a href="/pag/Contacto.html" id="contact-link">Contacto</a></li>
+                <li><a href="/pag/ofertas.html" id="ofertas-link">Ofertas</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+        <!-- Menú Desplegable para Móviles -->
+        <div class="mobile-menu">
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰ Menú</button>
+            <div id="mobile-menu-content" class="mobile-menu-content">
+                <a href="/index.html">Inicio</a>
+                <a href="/pag/Productos/Productos.html">Productos</a>
+                <a href="/pag/Nosotros.html">Acerca de</a>
+                <a href="/pag/Contacto.html">Contacto</a>
+                <a href="/pag/ofertas.html">Ofertas</a>
+            </div>
+        </div>
+    
+
+    
+
+    <script src="scripts/timer.js"></script>
+
+    <!-- Sección Principal -->
+    <main class="blog-post">
+        <div class="container">
+            <article class="post-content">
+                <header class="post-header">
+                    <h1>Guía Completa de Nutrición Deportiva</h1>
+                    <div class="post-meta">
+                        <span class="post-date"><i class="far fa-calendar"></i> 2 Febrero, 2025</span>
+                        <span class="post-author"><i class="far fa-user"></i> Por Salva Peris</span>
+                        <span class="post-category"><i class="far fa-folder"></i> Nutrición</span>
+                    </div>
+                </header>
+
+                <img src="/img/nutricion deportiva.jpg" alt="Nutrición deportiva" class="post-image">
+
+                <div class="post-body">
+                    <h2>¿Por qué es importante la nutrición deportiva?</h2>
+                    <p>La nutrición deportiva es fundamental para cualquier persona que realice actividad física regular. Una buena alimentación no solo mejora el rendimiento deportivo, sino que también ayuda en la recuperación y previene lesiones.</p>
+
+                    <h2>Macronutrientes esenciales</h2>
+                    <h3>Proteínas</h3>
+                    <p>Las proteínas son esenciales para la construcción y reparación muscular. Se recomienda consumir entre 1.6-2.2g por kg de peso corporal para deportistas que buscan ganar masa muscular.</p>
+
+                    <h3>Carbohidratos</h3>
+                    <p>Los carbohidratos son la principal fuente de energía para el ejercicio de alta intensidad. La cantidad necesaria varía según el tipo e intensidad del entrenamiento.</p>
+
+                    <h3>Grasas saludables</h3>
+                    <p>Las grasas son importantes para la producción hormonal y la absorción de vitaminas. Se recomienda que constituyan el 20-35% de la ingesta calórica total.</p>
+
+                    <h2>Timing nutricional</h2>
+                    <p>El momento en que consumes los nutrientes es casi tan importante como la cantidad que consumes:</p>
+                    <ul>
+                        <li>Pre-entrenamiento: Consume carbohidratos de fácil digestión 1-2 horas antes</li>
+                        <li>Durante el entrenamiento: Hidratación y electrolitos</li>
+                        <li>Post-entrenamiento: Proteínas y carbohidratos en los primeros 30 minutos</li>
+                    </ul>
+
+                    <div class="post-tips">
+                        <h3>Consejos prácticos</h3>
+                        <ul>
+                            <li>Planifica tus comidas con anticipación</li>
+                            <li>Mantén un diario nutricional</li>
+                            <li>Ajusta las cantidades según tus objetivos</li>
+                            <li>Prioriza alimentos integrales sobre procesados</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="post-share">
+                    <h3>Comparte este artículo</h3>
+                    <div class="social-buttons">
+                        <a href="#" class="share-button facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="share-button twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="share-button whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </article>
+
+           
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-sections">
+                <!-- Información de la Empresa -->
+                <div class="footer-section">
+                    <h3>AlphaStrength</h3>
+                    <p>AlphaStrength es tu tienda de confianza para suplementos deportivos y nutrición. Nos dedicamos a ofrecer productos de alta calidad para ayudarte a alcanzar tus objetivos de fitness.</p>
+                </div>
+                <!-- Enlaces Útiles -->
+                <div class="footer-section">
+                    <h3>Enlaces Útiles</h3>
+                    <ul>
+                        <li><a href="/pag/Productos/Productos.html">Productos</a></li>
+                        <li><a href="/pag/Nosotros.html">Acerca de</a></li>
+                        <li><a href="/pag/Contacto.html">Contacto</a></li>
+                        <li><a href="/pag/ofertas.html">Ofertas</a></li>
+                        <li><a href="/pag/PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                        <li><a href="/pag/TerminosCondiciones.html">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <!-- Redes Sociales -->
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/AlphaStrength" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/AlphaStrength" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/AlphaStrength" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/AlphaStrength" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Suscripción al Boletín -->
+                <div class="footer-section">
+                    <h3>Suscríbete a Nuestro Boletín</h3>
+                    <form action="/suscripcion" method="post">
+                        <input type="email" name="email" placeholder="Introduce tu correo electrónico" required>
+                        <button type="submit">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AlphaStrength. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addCartButtons = document.querySelectorAll('.btn-add-cart');
+
+            addCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productName = this.getAttribute('data-name');
+                    const productPrice = this.getAttribute('data-price');
+                    addToCart(productName, productPrice);
+                });
+            });
+
+            function addToCart(name, price) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const product = cart.find(item => item.name === name);
+                if (product) {
+                    product.quantity += 1;
+                } else {
+                    cart.push({ name, price: parseFloat(price), quantity: 1 });
+                }
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert('Producto añadido al carrito');
+            }
+        });
+        
+            function toggleMobileMenu() {
+        var menuContent = document.getElementById('mobile-menu-content');
+        if (menuContent.style.display === 'block') {
+            menuContent.style.display = 'none';
+        } else {
+            menuContent.style.display = 'block';
+        }
+    }
+
+    </script>
+    <script src="scripts/carousel.js"></script>
+</body>
+</html>
