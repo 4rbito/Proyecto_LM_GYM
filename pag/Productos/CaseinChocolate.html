@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proteína - AlphaStrength</title>
+    <title>Caseína de Chocolate - AlphaStrength</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/img/Alpha_strenght.jpg" type="image/jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -62,13 +62,13 @@
     <main>
         <div class="containerAminoenergy">
             <div class="product-detailAminoenergy">
-                <h2>Proteína</h2>
-                <img src="/img/ProteinaGold2kgBuenaCalidad.png" alt="Proteína">
-                <p>Descripción: La Proteína de AlphaStrength es perfecta para mejorar tu rendimiento y aumentar tu masa muscular.</p>
-                <p class="priceAminoenergy">Precio: €40.00</p>
+                <h2>Caseína de Chocolate</h2>
+                <img src="/img/CaseinGoldChocolateSupremeBuenaCalidad.png" alt="Caseína de Chocolate">
+                <p>Descripción: La Caseína de Chocolate de AlphaStrength es perfecta para obtener la proteína que necesitas con un delicioso sabor a chocolate.</p>
+                <p class="priceAminoenergy">Precio: €30.00</p>
                 <label for="quantity">Cantidad:</label>
                 <input type="number" id="quantity" name="quantity" min="1" value="1">
-                <button class="add-to-cartAminoenergy" onclick="addToCart('Proteína', 40.00)">Añadir a la Cesta</button>
+                <button class="add-to-cartAminoenergy" onclick="addToCart('Caseína de Chocolate', 30.00)">Añadir a la Cesta</button>
                 <h3>Valor Energético</h3>
                 <table>
                     <tr>
@@ -106,7 +106,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <p>¡Excelente producto! Me ha ayudado mucho en mis entrenamientos.</p>
+                        <p>¡Delicioso y muy efectivo! Perfecto para después del entrenamiento.</p>
                     </div>
                     <div class="review">
                         <div class="stars">
@@ -116,7 +116,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p>Muy buena calidad, lo recomiendo.</p>
+                        <p>Me encanta el sabor, la mejor proteína que he probado.</p>
                     </div>
                 </div>
             </div>
@@ -173,11 +173,10 @@
     <script>
         function addToCart(productName, productPrice) {
             const quantity = document.getElementById('quantity').value;
-            const flavor = document.getElementById('flavor').value;
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart.push({ name: productName, price: productPrice, quantity: quantity, flavor: flavor });
+            cart.push({ name: productName, price: productPrice, quantity: quantity });
             localStorage.setItem('cart', JSON.stringify(cart));
-            alert(`${quantity} x ${productName} (${flavor}) ha sido añadido a la cesta.`);
+            alert(`${quantity} x ${productName} ha sido añadido a la cesta.`);
         }
 
         function toggleMobileMenu() {

@@ -46,8 +46,8 @@
         </div>
     </nav>
 
-     <!-- Menú Desplegable para Móviles -->
-     <div class="mobile-menu">
+    <!-- Menú Desplegable para Móviles -->
+    <div class="mobile-menu">
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰ Menú</button>
         <div id="mobile-menu-content" class="mobile-menu-content">
             <a href="/index.html">Inicio</a>
@@ -60,12 +60,12 @@
 
     <!-- Sección Principal -->
     <main>
-        <div class="containerMultivitaminico">
-            <div class="product-detailMultivitaminico">
+        <div class="containerAminoenergy">
+            <div class="product-detailAminoenergy">
                 <h2>Multivitamínico</h2>
                 <img src="/img/multivitaminico.jpg" alt="Multivitamínico">
                 <p>Descripción: Un suplemento multivitamínico completo para apoyar tu salud y bienestar general.</p>
-                <p class="priceMultivitaminico">Precio: $15.00</p>
+                <p class="priceAminoenergy">Precio: €15.00</p>
                 <label for="quantity">Cantidad:</label>
                 <input type="number" id="quantity" name="quantity" min="1" value="1">
                 <label for="flavor">Sabor:</label>
@@ -74,7 +74,7 @@
                     <option value="limón">Limón</option>
                     <option value="frutas">Frutas</option>
                 </select>
-                <button class="add-to-cartMultivitaminico" onclick="addToCart('Multivitamínico', 15.00)">Añadir a la Cesta</button>
+                <button class="add-to-cartAminoenergy" onclick="addToCart('Multivitamínico', 15.00)">Añadir a la Cesta</button>
                 <h3>Valor Energético</h3>
                 <table>
                     <tr>
@@ -129,52 +129,51 @@
         </div>
     </main>
 
-      <!-- Pie de Página -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-sections">
-            <!-- Información de la Empresa -->
-            <div class="footer-section">
-                <h3>AlphaStrength</h3>
-                <p>AlphaStrength es tu tienda de confianza para suplementos deportivos y nutrición. Nos dedicamos a ofrecer productos de alta calidad para ayudarte a alcanzar tus objetivos de fitness.</p>
-            </div>
-            <!-- Enlaces Útiles -->
-            <div class="footer-section">
-                <h3>Enlaces Útiles</h3>
-                <ul>
-                    <li><a href="/pag/Productos/Productos.html">Productos</a></li>
-                    <li><a href="/pag/Nosotros.html">Acerca de</a></li>
-                    <li><a href="/pag/Contacto.html">Contacto</a></li>
-                    <li><a href="/pag/ofertas.html">Ofertas</a></li>
-                    <li><a href="/pag/PoliticaPrivacidad.html">Política de Privacidad</a></li>
-                    <li><a href="/pag/TerminosCondiciones.html">Términos y Condiciones</a></li>
-                </ul>
-            </div>
-            <!-- Redes Sociales -->
-            <div class="footer-section">
-                <h3>Síguenos</h3>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/AlphaStrength" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.twitter.com/AlphaStrength" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/AlphaStrength" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/AlphaStrength" target="_blank"><i class="fab fa-youtube"></i></a>
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-sections">
+                <!-- Información de la Empresa -->
+                <div class="footer-section">
+                    <h3>AlphaStrength</h3>
+                    <p>AlphaStrength es tu tienda de confianza para suplementos deportivos y nutrición. Nos dedicamos a ofrecer productos de alta calidad para ayudarte a alcanzar tus objetivos de fitness.</p>
+                </div>
+                <!-- Enlaces Útiles -->
+                <div class="footer-section">
+                    <h3>Enlaces Útiles</h3>
+                    <ul>
+                        <li><a href="/pag/Productos/Productos.html">Productos</a></li>
+                        <li><a href="/pag/Nosotros.html">Acerca de</a></li>
+                        <li><a href="/pag/Contacto.html">Contacto</a></li>
+                        <li><a href="/pag/ofertas.html">Ofertas</a></li>
+                        <li><a href="/pag/PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                        <li><a href="/pag/TerminosCondiciones.html">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <!-- Redes Sociales -->
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/AlphaStrength" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/AlphaStrength" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/AlphaStrength" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/AlphaStrength" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Suscripción al Boletín -->
+                <div class="footer-section">
+                    <h3>Suscríbete a Nuestro Boletín</h3>
+                    <form action="/suscripcion" method="post">
+                        <input type="email" name="email" placeholder="Introduce tu correo electrónico" required>
+                        <button type="submit">Suscribirse</button>
+                    </form>
                 </div>
             </div>
-            <!-- Suscripción al Boletín -->
-            <div class="footer-section">
-                <h3>Suscríbete a Nuestro Boletín</h3>
-                <form action="/suscripcion" method="post">
-                    <input type="email" name="email" placeholder="Introduce tu correo electrónico" required>
-                    <button type="submit">Suscribirse</button>
-                </form>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AlphaStrength. Todos los derechos reservados.</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 AlphaStrength. Todos los derechos reservados.</p>
-        </div>
-    </div>
-</footer>
-
+    </footer>
 
     <script src="/scripts/script.js"></script>
     <script>
@@ -188,13 +187,13 @@
         }
 
         function toggleMobileMenu() {
-var menuContent = document.getElementById('mobile-menu-content');
-if (menuContent.style.display === 'block') {
-   menuContent.style.display = 'none';
-} else {
-   menuContent.style.display = 'block';
-}
-}
+            var menuContent = document.getElementById('mobile-menu-content');
+            if (menuContent.style.display === 'block') {
+                menuContent.style.display = 'none';
+            } else {
+                menuContent.style.display = 'block';
+            }
+        }
     </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proteína - AlphaStrength</title>
+    <title>Pre-Workout Green Apple - AlphaStrength</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/img/Alpha_strenght.jpg" type="image/jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -62,13 +62,13 @@
     <main>
         <div class="containerAminoenergy">
             <div class="product-detailAminoenergy">
-                <h2>Proteína</h2>
-                <img src="/img/ProteinaGold2kgBuenaCalidad.png" alt="Proteína">
-                <p>Descripción: La Proteína de AlphaStrength es perfecta para mejorar tu rendimiento y aumentar tu masa muscular.</p>
-                <p class="priceAminoenergy">Precio: €40.00</p>
+                <h2>Pre-Workout Green Apple</h2>
+                <img src="/img/PreEntrenoManzanaBuenaCalidad.webp" alt="Pre-Workout Green Apple">
+                <p>Descripción: El Pre-Workout Green Apple de AlphaStrength es perfecto para obtener la energía y el enfoque que necesitas antes de tu entrenamiento.</p>
+                <p class="priceAminoenergy">Precio: €30.00</p>
                 <label for="quantity">Cantidad:</label>
                 <input type="number" id="quantity" name="quantity" min="1" value="1">
-                <button class="add-to-cartAminoenergy" onclick="addToCart('Proteína', 40.00)">Añadir a la Cesta</button>
+                <button class="add-to-cartAminoenergy" onclick="addToCart('Pre-Workout Green Apple', 30.00)">Añadir a la Cesta</button>
                 <h3>Valor Energético</h3>
                 <table>
                     <tr>
@@ -173,11 +173,10 @@
     <script>
         function addToCart(productName, productPrice) {
             const quantity = document.getElementById('quantity').value;
-            const flavor = document.getElementById('flavor').value;
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart.push({ name: productName, price: productPrice, quantity: quantity, flavor: flavor });
+            cart.push({ name: productName, price: productPrice, quantity: quantity });
             localStorage.setItem('cart', JSON.stringify(cart));
-            alert(`${quantity} x ${productName} (${flavor}) ha sido añadido a la cesta.`);
+            alert(`${quantity} x ${productName} ha sido añadido a la cesta.`);
         }
 
         function toggleMobileMenu() {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proteína - AlphaStrength</title>
+    <title>Multivitamínico Hombre 150 Cápsulas - AlphaStrength</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/img/Alpha_strenght.jpg" type="image/jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -62,13 +62,13 @@
     <main>
         <div class="containerAminoenergy">
             <div class="product-detailAminoenergy">
-                <h2>Proteína</h2>
-                <img src="/img/ProteinaGold2kgBuenaCalidad.png" alt="Proteína">
-                <p>Descripción: La Proteína de AlphaStrength es perfecta para mejorar tu rendimiento y aumentar tu masa muscular.</p>
-                <p class="priceAminoenergy">Precio: €40.00</p>
+                <h2>Multivitamínico Hombre 150 Cápsulas</h2>
+                <img src="/img/Multivitaminico 150Caps.png" alt="Multivitamínico Hombre 150 Cápsulas">
+                <p>Descripción: Un suplemento multivitamínico diseñado específicamente para las necesidades nutricionales de los hombres.</p>
+                <p class="priceAminoenergy">Precio: €25.00</p>
                 <label for="quantity">Cantidad:</label>
                 <input type="number" id="quantity" name="quantity" min="1" value="1">
-                <button class="add-to-cartAminoenergy" onclick="addToCart('Proteína', 40.00)">Añadir a la Cesta</button>
+                <button class="add-to-cartAminoenergy" onclick="addToCart('Multivitamínico Hombre 150 Cápsulas', 25.00)">Añadir a la Cesta</button>
                 <h3>Valor Energético</h3>
                 <table>
                     <tr>
@@ -77,23 +77,23 @@
                     </tr>
                     <tr>
                         <td>Calorías</td>
-                        <td>400 kcal</td>
+                        <td>200 kcal</td>
                     </tr>
                     <tr>
                         <td>Proteínas</td>
-                        <td>30 g</td>
+                        <td>5 g</td>
                     </tr>
                     <tr>
                         <td>Carbohidratos</td>
-                        <td>50 g</td>
+                        <td>40 g</td>
                     </tr>
                     <tr>
                         <td>Grasas</td>
-                        <td>10 g</td>
+                        <td>2 g</td>
                     </tr>
                     <tr>
                         <td>Fibra</td>
-                        <td>5 g</td>
+                        <td>3 g</td>
                     </tr>
                 </table>
                 <h3>Valoraciones</h3>
@@ -106,7 +106,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <p>¡Excelente producto! Me ha ayudado mucho en mis entrenamientos.</p>
+                        <p>¡Excelente producto! Me siento con más energía desde que lo tomo.</p>
                     </div>
                     <div class="review">
                         <div class="stars">
@@ -116,7 +116,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p>Muy buena calidad, lo recomiendo.</p>
+                        <p>Muy buen suplemento, lo recomiendo.</p>
                     </div>
                 </div>
             </div>
@@ -173,11 +173,10 @@
     <script>
         function addToCart(productName, productPrice) {
             const quantity = document.getElementById('quantity').value;
-            const flavor = document.getElementById('flavor').value;
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart.push({ name: productName, price: productPrice, quantity: quantity, flavor: flavor });
+            cart.push({ name: productName, price: productPrice, quantity: quantity });
             localStorage.setItem('cart', JSON.stringify(cart));
-            alert(`${quantity} x ${productName} (${flavor}) ha sido añadido a la cesta.`);
+            alert(`${quantity} x ${productName} ha sido añadido a la cesta.`);
         }
 
         function toggleMobileMenu() {
