@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/img/Alpha_strenght.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>AlphaStrength</title>
+</head>
+<body>
+  
+
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="container">
+            <div class="header-left">
+                <img src="/img/Alpha_strenght.jpg" alt="AlphaStrength Logo" class="logo">
+                <h1 class="NombreMarca" >AlphaStrength</h1>
+            </div>
+            <div class="header-center">
+                <input type="text" placeholder="Buscar..." class="search-bar">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-right">
+                <a href="/pag/cesta.html" class="account">
+                    <i class="fas fa-user icon"></i>
+                    <span id="account-text">Cuenta</span>
+                </a>
+                <a href="/pag/cesta.html" class="cart">
+                    <i class="fas fa-shopping-cart icon"></i>
+                    <span id="cart-text">Cesta</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="navigation">
+        <div class="container">
+            <ul>
+                <li><a href="/index.html" id="home-link">Inicio</a></li>
+                <li><a href="/pag/Productos/Productos.html" id="productos-link">Productos</a></li>
+                <li><a href="/pag/Nosotros.html" id="about-link">Acerca de</a></li>
+                <li><a href="/pag/Contacto.html" id="contact-link">Contacto</a></li>
+                <li><a href="/pag/ofertas.html" id="ofertas-link">Ofertas</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+        <!-- Menú Desplegable para Móviles -->
+        <div class="mobile-menu">
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰ Menú</button>
+            <div id="mobile-menu-content" class="mobile-menu-content">
+                <a href="/index.html">Inicio</a>
+                <a href="/pag/Productos/Productos.html">Productos</a>
+                <a href="/pag/Nosotros.html">Acerca de</a>
+                <a href="/pag/Contacto.html">Contacto</a>
+                <a href="/pag/ofertas.html">Ofertas</a>
+            </div>
+        </div>
+    
+
+    
+
+    <script src="scripts/timer.js"></script>
+
+    <!-- Sección Principal -->
+    <main class="blog-post">
+        <div class="container">
+            <article class="post-content">
+                <header class="post-header">
+                    <h1>Guía Completa de Suplementación Deportiva</h1>
+                    <div class="post-meta">
+                        <span class="post-date"><i class="far fa-calendar"></i> 2 Febrero, 2025</span>
+                        <span class="post-author"><i class="far fa-user"></i> Por Alex Albert</span>
+                        <span class="post-category"><i class="far fa-folder"></i> Suplementación</span>
+                    </div>
+                </header>
+
+                <img src="/img/suplementos.jpg" alt="Guía de suplementación" class="post-image">
+
+                <div class="post-body">
+                    <h2>Suplementos Esenciales</h2>
+
+                    <div class="supplement-card">
+                        <h3>1. Proteína en Polvo</h3>
+                        <div class="supplement-info">
+                            <p><strong>Beneficios:</strong> Recuperación muscular, ganancia de masa magra</p>
+                            <p><strong>Cuándo tomar:</strong> Post-entrenamiento, entre comidas</p>
+                            <p><strong>Dosis:</strong> 20-30g por toma</p>
+                            <p><strong>Tipos:</strong> Whey, Caseína, Vegetal</p>
+                        </div>
+                    </div>
+
+                    <div class="supplement-card">
+                        <h3>2. Creatina Monohidrato</h3>
+                        <div class="supplement-info">
+                            <p><strong>Beneficios:</strong> Fuerza, potencia, recuperación</p>
+                            <p><strong>Cuándo tomar:</strong> Cualquier momento del día</p>
+                            <p><strong>Dosis:</strong> 5g diarios</p>
+                            <p><strong>Nota:</strong> No requiere fase de carga</p>
+                        </div>
+                    </div>
+
+                    <div class="supplement-card">
+                        <h3>3. Pre-entreno</h3>
+                        <div class="supplement-info">
+                            <p><strong>Beneficios:</strong> Energía, concentración, rendimiento</p>
+                            <p><strong>Cuándo tomar:</strong> 30 minutos antes del entrenamiento</p>
+                            <p><strong>Ingredientes clave:</strong> Cafeína, Beta-Alanina, Citrulina</p>
+                        </div>
+                    </div>
+
+                    <h2>Suplementos Complementarios</h2>
+                    <ul>
+                        <li><strong>BCAAs:</strong> Para entrenamientos en ayunas</li>
+                        <li><strong>Omega 3:</strong> Salud general y recuperación</li>
+                        <li><strong>Vitamina D:</strong> Función hormonal y sistema inmune</li>
+                        <li><strong>ZMA:</strong> Recuperación y descanso</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <h3>Precauciones y Contraindicaciones</h3>
+                        <ul>
+                            <li>Consulta con un profesional antes de empezar cualquier suplementación</li>
+                            <li>No excedas las dosis recomendadas</li>
+                            <li>Verifica que los suplementos estén certificados</li>
+                            <li>La suplementación no sustituye una dieta equilibrada</li>
+                        </ul>
+                    </div>
+
+                    <div class="tips-box">
+                        <h3>Consejos para la Suplementación</h3>
+                        <ul>
+                            <li>Comienza con lo básico (proteína y creatina)</li>
+                            <li>Mantén un registro de tu suplementación</li>
+                            <li>Evalúa tu tolerancia a cada suplemento</li>
+                            <li>Prioriza calidad sobre precio</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="post-share">
+                    <h3>Comparte este artículo</h3>
+                    <div class="social-buttons">
+                        <a href="#" class="share-button facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="share-button twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="share-button whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </article>
+
+           
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-sections">
+                <!-- Información de la Empresa -->
+                <div class="footer-section">
+                    <h3>AlphaStrength</h3>
+                    <p>AlphaStrength es tu tienda de confianza para suplementos deportivos y nutrición. Nos dedicamos a ofrecer productos de alta calidad para ayudarte a alcanzar tus objetivos de fitness.</p>
+                </div>
+                <!-- Enlaces Útiles -->
+                <div class="footer-section">
+                    <h3>Enlaces Útiles</h3>
+                    <ul>
+                        <li><a href="/pag/Productos/Productos.html">Productos</a></li>
+                        <li><a href="/pag/Nosotros.html">Acerca de</a></li>
+                        <li><a href="/pag/Contacto.html">Contacto</a></li>
+                        <li><a href="/pag/ofertas.html">Ofertas</a></li>
+                        <li><a href="/pag/PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                        <li><a href="/pag/TerminosCondiciones.html">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <!-- Redes Sociales -->
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/AlphaStrength" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/AlphaStrength" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/AlphaStrength" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/AlphaStrength" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Suscripción al Boletín -->
+                <div class="footer-section">
+                    <h3>Suscríbete a Nuestro Boletín</h3>
+                    <form action="/suscripcion" method="post">
+                        <input type="email" name="email" placeholder="Introduce tu correo electrónico" required>
+                        <button type="submit">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AlphaStrength. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addCartButtons = document.querySelectorAll('.btn-add-cart');
+
+            addCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productName = this.getAttribute('data-name');
+                    const productPrice = this.getAttribute('data-price');
+                    addToCart(productName, productPrice);
+                });
+            });
+
+            function addToCart(name, price) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const product = cart.find(item => item.name === name);
+                if (product) {
+                    product.quantity += 1;
+                } else {
+                    cart.push({ name, price: parseFloat(price), quantity: 1 });
+                }
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert('Producto añadido al carrito');
+            }
+        });
+        
+            function toggleMobileMenu() {
+        var menuContent = document.getElementById('mobile-menu-content');
+        if (menuContent.style.display === 'block') {
+            menuContent.style.display = 'none';
+        } else {
+            menuContent.style.display = 'block';
+        }
+    }
+
+    </script>
+    <script src="scripts/carousel.js"></script>
+</body>
+</html>

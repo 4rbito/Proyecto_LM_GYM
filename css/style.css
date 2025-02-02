@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(189, 186, 186); /* Fondo gris claro */
+  background-color: rgb(241, 240, 240); /* Fondo gris claro */
   color: #333; /* Gris oscuro para el texto */
 }
 
@@ -135,12 +135,11 @@ body {
 /* Estilos del Carrusel */
 .carousel {
   width: 100%;
-  max-width: 1200px; /* Adjust this value based on your needs */
+  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
   margin-bottom: 2rem;
-  
 }
 
 .carousel-container {
@@ -153,11 +152,36 @@ body {
   transition: transform 0.5s ease-in-out;
 }
 
-.carousel-slide img {
-  height: 400px; /* Adjust this value based on your needs */
-  object-fit: cover;
+/* Estilos para la Opción 1 (con <a>) */
+.carousel-slide a {
+  width: 100%;
+  flex-shrink: 0;
+  cursor: pointer;
 }
 
+.carousel-slide img {
+  width: 100%;
+  height: 400px; /* o el alto que prefieras */
+  object-fit: cover;
+  display: block;
+}
+
+/* Estilos para la Opción 2 (con divs) */
+.carousel-item {
+  width: 100%;
+  height: 400px; /* o el alto que prefieras */
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-item:hover {
+  opacity: 0.9;
+}
+
+/* Estilos comunes de los botones */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -1907,7 +1931,106 @@ body {
 .widget a:hover {
   color: #007bff;
 }
+/* Cajas de rutinas */
+.workout-plan {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border-left: 4px solid #cc0000;
+}
 
+.workout-plan h4 {
+  color: #cc0000;
+  margin-bottom: 1rem;
+}
+
+/* Cajas de suplementos */
+.supplement-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.supplement-card h3 {
+  color: #cc0000;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #cc0000;
+  padding-bottom: 0.5rem;
+}
+
+.supplement-info {
+  margin-top: 1rem;
+}
+
+.supplement-info p {
+  margin-bottom: 0.5rem;
+}
+
+/* Cajas de advertencia */
+.warning-box {
+  background-color: #8b3b3b;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.warning-box h3 {
+  color: #242423;
+  margin-bottom: 1rem;
+}
+
+.warning-box ul {
+  color: #080808;
+}
+
+/* Cajas de consejos */
+.tips-box {
+  background-color: #f5bb94;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.tips-box h3 {
+  color: #6b1414;
+  margin-bottom: 1rem;
+}
+
+.tips-box ul {
+  color: #6b1414;
+}
+
+/* Principios sección */
+.principles-section {
+  background-color: #e9ecef;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.principles-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.principles-section li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.principles-section li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #cc0000;
+}
 @media (max-width: 768px) {
   .post-meta {
       flex-direction: column;
