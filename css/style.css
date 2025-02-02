@@ -135,12 +135,11 @@ body {
 /* Estilos del Carrusel */
 .carousel {
   width: 100%;
-  max-width: 1200px; /* Adjust this value based on your needs */
+  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
   margin-bottom: 2rem;
-  
 }
 
 .carousel-container {
@@ -153,11 +152,36 @@ body {
   transition: transform 0.5s ease-in-out;
 }
 
-.carousel-slide img {
-  height: 400px; /* Adjust this value based on your needs */
-  object-fit: cover;
+/* Estilos para la Opción 1 (con <a>) */
+.carousel-slide a {
+  width: 100%;
+  flex-shrink: 0;
+  cursor: pointer;
 }
 
+.carousel-slide img {
+  width: 100%;
+  height: 400px; /* o el alto que prefieras */
+  object-fit: cover;
+  display: block;
+}
+
+/* Estilos para la Opción 2 (con divs) */
+.carousel-item {
+  width: 100%;
+  height: 400px; /* o el alto que prefieras */
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-item:hover {
+  opacity: 0.9;
+}
+
+/* Estilos comunes de los botones */
 .carousel-btn {
   position: absolute;
   top: 50%;

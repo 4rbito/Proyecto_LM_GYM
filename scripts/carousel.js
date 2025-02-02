@@ -1,19 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
-    const slides = document.querySelectorAll('.carousel-slide img');
+    // Selecciona los elementos del carousel según la opción elegida
+    const slides = document.querySelectorAll('.carousel-slide > *'); // Funciona con ambas opciones
     const totalSlides = slides.length;
     const slideContainer = document.querySelector('.carousel-slide');
 
-    // Set initial state
     function initializeCarousel() {
-        // Set width of carousel-slide to accommodate all images
         slideContainer.style.width = `${totalSlides * 100}%`;
-        
-        // Set each image width to be proportional
         slides.forEach(slide => {
             slide.style.width = `${100 / totalSlides}%`;
         });
-        
         showSlide(currentIndex);
     }
 
@@ -33,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
         showSlide(currentIndex);
     };
 
-    // Initialize carousel
+    // Inicializar carousel
     initializeCarousel();
 
-    // Auto advance slides
+    // Auto-avance
     setInterval(nextSlide, 5000);
 });
