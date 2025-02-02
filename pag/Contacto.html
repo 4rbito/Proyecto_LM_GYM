@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="../img/Alpha_strenght.jpg" type="image/jpeg">
+    <title>Contáctanos - AlphaStrength</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/img/Alpha_strenght.jpg" type="image/jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Contacto</title>
 </head>
 <body>
-    
-
     <!-- Encabezado -->
     <header class="header">
         <div class="container">
             <div class="header-left">
-                <img src="../img/Alpha_strenght.jpg" alt="AlphaStrength Logo" class="logo">
+                <img src="/img/Alpha_strenght.jpg" alt="AlphaStrength Logo" class="logo">
                 <h1 class="NombreMarca">AlphaStrength</h1>
             </div>
             <div class="header-center">
@@ -23,11 +23,11 @@
                 <button class="search-button"><i class="fas fa-search"></i></button>
             </div>
             <div class="header-right">
-                <a href="cuenta.html" class="account">
+                <a href="/pag/cuenta.html" class="account">
                     <i class="fas fa-user icon"></i>
                     <span id="account-text">Cuenta</span>
                 </a>
-                <a href="cesta.html" class="cart">
+                <a href="/pag/cesta.html" class="cart">
                     <i class="fas fa-shopping-cart icon"></i>
                     <span id="cart-text">Cesta</span>
                 </a>
@@ -39,130 +39,112 @@
     <nav class="navigation">
         <div class="container">
             <ul>
-                <li><a href="../index.html" id="home-link">Inicio</a></li>
-                <li><a href="/pag/Productos/Productos.html" id="productos-link">Productos</a></li>
-                <li><a href="Nosotros.html" id="about-link">Acerca de</a></li>
-                <li><a href="Contacto.html" id="contact-link">Contacto</a></li>
+                <li><a href="/index.html" id="home-link">Inicio</a></li>
+                <li><a href="/pag/Productos/Productos.html" id="products-link">Productos</a></li>
+                <li><a href="/pag/Nosotros.html" id="about-link">Acerca de</a></li>
+                <li><a href="/pag/Contacto.html" id="contact-link">Contacto</a></li>
                 <li><a href="/pag/ofertas.html" id="ofertas-link">Ofertas</a></li>
             </ul>
         </div>
     </nav>
 
-     <!-- Menú Desplegable para Móviles -->
-     <div class="mobile-menu">
-        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰ Menú</button>
-        <div id="mobile-menu-content" class="mobile-menu-content">
-            <a href="/index.html">Inicio</a>
-            <a href="/pag/Productos/Productos.html">Productos</a>
-            <a href="/pag/Nosotros.html">Acerca de</a>
-            <a href="/pag/Contacto.html">Contacto</a>
-            <a href="/pag/ofertas.html">Ofertas</a>
-        </div>
-    </div>
-
     <!-- Sección Principal -->
     <main>
-        <!-- Contacto -->
         <section class="contacto">
             <div class="container">
-                <h2>Contacto</h2>
-                <p>Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos a través del siguiente formulario.</p>
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name" required>
+                <h2>Contáctanos</h2>
+                <p>Si tienes alguna pregunta o necesitas ayuda, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Información de Contacto</h3>
+                        <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+34611460395">+34 611 460 395</a></p>
+                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:soporte@alphastrength.com">soporte@alphastrength.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle Ejemplo, 123, Madrid, España</p>
+                        <h3>Horario de Atención</h3>
+                        <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                        <p>Sábado: 10:00 AM - 2:00 PM</p>
+                        <p>Domingo: Cerrado</p>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="col-md-6">
+                        <h3>Formulario de Contacto</h3>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label for="name">Nombre:</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje:</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Enviar</button>
-                </form>
-            </div>
-        </section>
-
-        <!-- Equipo -->
-        <section class="equipo">
-            <div class="container">
-                <h2>Nuestro Equipo</h2>
-                <div class="team-member">
-                    <img src="/img/cano.jpg" alt="Alvaro Cano">
-                    <h3>Alvaro Cano</h3>
-                    <p>CEO & Fundador</p>
                 </div>
-                <div class="team-member">
-                    <img src="/img/salva.jpg" alt="Salvador Peris">
-                    <h3>Salvador Peris</h3>
-                    <p>Director de Marketing</p>
-                </div>
-                <div class="team-member">
-                    <img src="/img/alex.jpg" alt="Alejandro Albert">
-                    <h3>Alejandro Albert</h3>
-                    <p>Director de Tecnología</p>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <h3>Ubicación</h3>
+                        <div class="map-responsive">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.1234567890123!2d-3.703790!3d40.416775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228f123456789%3A0x1234567890abcdef!2sCalle%20Ejemplo%2C%20123%2C%20Madrid%2C%20España!5e0!3m2!1ses!2ses!4v1611234567890!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-       <!-- Pie de Página -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-sections">
-            <!-- Información de la Empresa -->
-            <div class="footer-section">
-                <h3>AlphaStrength</h3>
-                <p>AlphaStrength es tu tienda de confianza para suplementos deportivos y nutrición. Nos dedicamos a ofrecer productos de alta calidad para ayudarte a alcanzar tus objetivos de fitness.</p>
-            </div>
-            <!-- Enlaces Útiles -->
-            <div class="footer-section">
-                <h3>Enlaces Útiles</h3>
-                <ul>
-                    <li><a href="/pag/Productos/Productos.html">Productos</a></li>
-                    <li><a href="/pag/Nosotros.html">Acerca de</a></li>
-                    <li><a href="/pag/Contacto.html">Contacto</a></li>
-                    <li><a href="/pag/ofertas.html">Ofertas</a></li>
-                    <li><a href="/pag/PoliticaPrivacidad.html">Política de Privacidad</a></li>
-                    <li><a href="/pag/TerminosCondiciones.html">Términos y Condiciones</a></li>
-                </ul>
-            </div>
-            <!-- Redes Sociales -->
-            <div class="footer-section">
-                <h3>Síguenos</h3>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/AlphaStrength" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.twitter.com/AlphaStrength" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/AlphaStrength" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/AlphaStrength" target="_blank"><i class="fab fa-youtube"></i></a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-sections">
+                <!-- Información de la Empresa -->
+                <div class="footer-section">
+                    <h3>AlphaStrength</h3>
+                    <p>AlphaStrength es tu tienda de confianza para suplementos deportivos y nutrición. Nos dedicamos a ofrecer productos de alta calidad para ayudarte a alcanzar tus objetivos de fitness.</p>
+                </div>
+                <!-- Enlaces Útiles -->
+                <div class="footer-section">
+                    <h3>Enlaces Útiles</h3>
+                    <ul>
+                        <li><a href="/pag/Productos/Productos.html">Productos</a></li>
+                        <li><a href="/pag/Nosotros.html">Acerca de</a></li>
+                        <li><a href="/pag/Contacto.html">Contacto</a></li>
+                        <li><a href="/pag/ofertas.html">Ofertas</a></li>
+                        <li><a href="/pag/Contactanos.html">Contactanos!</a></li>
+                        <li><a href="/pag/PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                        <li><a href="/pag/TerminosCondiciones.html">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <!-- Redes Sociales -->
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/AlphaStrength" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/AlphaStrength" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/AlphaStrength" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/AlphaStrength" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Suscripción al Boletín -->
+                <div class="footer-section">
+                    <h3>Suscríbete a Nuestro Boletín</h3>
+                    <form action="/suscripcion" method="post">
+                        <input type="email" name="email" placeholder="Introduce tu correo electrónico" required>
+                        <button type="submit">Suscribirse</button>
+                    </form>
                 </div>
             </div>
-            <!-- Suscripción al Boletín -->
-            <div class="footer-section">
-                <h3>Suscríbete a Nuestro Boletín</h3>
-                <form action="/suscripcion" method="post">
-                    <input type="email" name="email" placeholder="Introduce tu correo electrónico" required>
-                    <button type="submit">Suscribirse</button>
-                </form>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AlphaStrength. Todos los derechos reservados.</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 AlphaStrength. Todos los derechos reservados.</p>
-        </div>
-    </div>
-</footer>
-    <script>
-        function toggleMobileMenu() {
-   var menuContent = document.getElementById('mobile-menu-content');
-   if (menuContent.style.display === 'block') {
-       menuContent.style.display = 'none';
-   } else {
-       menuContent.style.display = 'block';
-   }
-}
-   </script>
-    
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
