@@ -374,6 +374,11 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.categories h2,
+.blog-preview h2 {
+ text-align: center;
+ margin-bottom: 2rem;
+}
 /* Productos */
 .productos {
   background-color: #e0e0e0; /* Fondo gris */
