@@ -135,11 +135,15 @@ body {
 /* Estilos del Carrusel */
 .carousel {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
+  max-width: 100vw;
+  margin: 0;
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .carousel-container {
@@ -150,6 +154,7 @@ body {
 .carousel-slide {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
 /* Estilos para la Opción 1 (con <a>) */
@@ -206,12 +211,12 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.prev-btn {
-  left: 20px;
+.next-btn {
+  right: 0;
 }
 
-.next-btn {
-  right: 20px;
+.prev-btn {
+  left: 0;
 }
 /*Cosas index */
 /* Estilos para Categorías */
@@ -229,6 +234,10 @@ body {
 
 .category-card {
   background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -240,23 +249,25 @@ body {
 }
 
 .category-card img {
-  width: 100%;
-  height: 200px;
+  width: 100%; /* Full width of the container */
+  max-width: 300px; /* Optional: set a max width if needed */
+  height: 300px; /* Fixed height */
   object-fit: cover;
-}
-
-.category-card h3 {
+  object-position: center; /* Ensure image is centered */
+ }
+ 
+ .category-card h3 {
   padding: 1rem;
   margin: 0;
   color: #333;
-}
-
-.category-card p {
+ }
+ 
+ .category-card p {
   padding: 0 1rem;
   color: #666;
-}
-
-.category-link {
+ }
+ 
+ .category-link {
   display: inline-block;
   margin: 1rem;
   padding: 0.5rem 1rem;
@@ -265,7 +276,7 @@ body {
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.3s ease;
-}
+ }
 
 /* Estilos para Beneficios */
 .benefits {
@@ -2175,7 +2186,24 @@ body {
 .navigation ul li {
   margin-bottom: 10px;
 }
+/*Ajuste carousel*/
+.carousel-slide img {
+  height: 160px; /* Smaller height on mobile */
+}
 
+.carousel-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
 /* Ajustes para el menú extensible */
 .menu-extensible {
   width: 100%;
