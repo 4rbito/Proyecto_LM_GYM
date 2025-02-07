@@ -250,8 +250,8 @@ body {
 
 .category-card img {
   width: 100%; /* Full width of the container */
-  max-width: 300px; /* Optional: set a max width if needed */
-  height: 300px; /* Fixed height */
+  max-width: 200px; /* Optional: set a max width if needed */
+  height: 250px; /* Fixed height */
   object-fit: cover;
   object-position: center; /* Ensure image is centered */
  }
