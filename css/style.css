@@ -466,6 +466,7 @@ body {
 
 /* Pie de Página */
 .footer {
+
   background: #333;
   color: #fff;
   padding: 40px 0;
@@ -2163,6 +2164,10 @@ body {
   color: #cc0000;
 }
 
+.footerMoviles{
+  display: none;
+}
+
 
 @media (max-width: 768px) {
   .post-meta {
@@ -2194,6 +2199,20 @@ body {
   }
   .containerAminoenergy img{
     width: 200px;
+  }
+
+  .footer{
+   display: none;
+  }
+  .footerMoviles{
+    display: block;
+    background: #333;
+  color: #fff;
+  padding: 40px 0;
+  }
+  .footer .social-icons{
+    display: block;
+    flex-wrap: wrap;
   }
 
 /* Ajustes para el encabezado */
