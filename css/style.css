@@ -937,6 +937,7 @@ body {
  display: flex;
  justify-content: center;
  margin-top: 20px;
+ 
 }
 
 .product-detailProteina {
@@ -950,9 +951,11 @@ body {
 }
 
 .product-detailProteina img {
- max-width: 100%;
+ 
  height: auto;
  margin-bottom: 15px;
+ width: 60%; /* Ajusta el tamaño según necesites */
+ max-width: 200px;
 }
 
 .product-detailProteina h2 {
@@ -1039,7 +1042,8 @@ body {
 }
 
 .product-detailMultivitaminico img {
- max-width: 100%;
+ max-width: 200px;
+ width: 60%;
  height: auto;
  margin-bottom: 15px;
 }
@@ -1214,9 +1218,10 @@ body {
 }
 
 .product-detailGalletas img {
- max-width: 100%;
- height: auto;
- margin-bottom: 15px;
+  width: 60%; /* Ajusta el tamaño según necesites */
+    max-width: 200px; /* Limita el tamaño máximo */
+    display: block;
+    margin: 0 auto;
 }
 
 .product-detailGalletas h2 {
