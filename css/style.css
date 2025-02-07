@@ -121,12 +121,7 @@ body {
   text-decoration: none;
 }
 
-.navigation ul li a:hover {
-  background-color: #555; /* Fondo más oscuro al pasar el cursor */
-  color: #fff; /* Blanco para el texto */
-  border-radius: 5px;
-  padding: 0.3rem 0.5rem; /* Espaciado visual */
-}
+
 /* Estilos del Carrusel */
 .carousel {
   width: 100%;
