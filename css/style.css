@@ -63,7 +63,7 @@ body {
   border-radius: 5px 0 0 5px;
 }
 
-.header-center .search-button {
+.header-right .search-button {
   padding: 0.5rem;
   border: none;
   background-color: #ff0000; /* Rojo */
@@ -84,11 +84,6 @@ body {
   align-items: center;
   margin-left: 1rem;
   color: #fff; /* Blanco para el texto */
-}
-
-.header-right .account:hover,
-.header-right .cart:hover {
-  color: #ff0000; /* Rojo */
 }
 
 .header-right .icon {
@@ -126,12 +121,7 @@ body {
   text-decoration: none;
 }
 
-.navigation ul li a:hover {
-  background-color: #555; /* Fondo más oscuro al pasar el cursor */
-  color: #fff; /* Blanco para el texto */
-  border-radius: 5px;
-  padding: 0.3rem 0.5rem; /* Espaciado visual */
-}
+
 /* Estilos del Carrusel */
 .carousel {
   width: 100%;
@@ -889,6 +879,7 @@ body {
  margin: auto;
  overflow: hidden;
  margin-top: 20px;
+ margin-bottom: 20px;
  background: #fff;
  padding: 20px;
  border: 1px solid #ddd;
@@ -2135,6 +2126,8 @@ body {
   left: 0;
   color: #cc0000;
 }
+
+
 @media (max-width: 768px) {
   .post-meta {
       flex-direction: column;
