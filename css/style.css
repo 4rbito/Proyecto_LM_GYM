@@ -1043,7 +1043,7 @@ body {
 
 .product-detailMultivitaminico img {
  max-width: 200px;
- width: 60%;
+  width: 60%;
  height: auto;
  margin-bottom: 15px;
 }
@@ -2111,17 +2111,17 @@ body {
 }
 
 .warning-box h3 {
-  color: #242423;
+  color: #f3f3ee;
   margin-bottom: 1rem;
 }
 
 .warning-box ul {
-  color: #080808;
+  color: #ffffff;
 }
 
 /* Cajas de consejos */
 .tips-box {
-  background-color: #f5bb94;
+  background-color: #8b3b3b;
   border: 1px solid #c3e6cb;
   border-radius: 8px;
   padding: 1.5rem;
@@ -2129,12 +2129,12 @@ body {
 }
 
 .tips-box h3 {
-  color: #6b1414;
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 
 .tips-box ul {
-  color: #6b1414;
+  color: #ffffff;
 }
 
 /* Principios sección */
@@ -2274,13 +2274,8 @@ body {
 }
 
 .footer-section {
-  width: 80%;
+  width: 100%;
   text-align: center;
-  
-}
-
-.col12{
-  display: none;
 }
 }
 /*Nosotros*/
