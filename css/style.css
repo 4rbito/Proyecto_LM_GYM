@@ -85,9 +85,6 @@ body {
   margin-left: 1rem;
   color: #fff; /* Blanco para el texto */
 }
-.header-right .cart:hover {
-  color: #ff0000; /* Rojo */
-}
 
 .header-right .icon {
   margin-right: 0.5rem;
