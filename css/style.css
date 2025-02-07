@@ -2214,6 +2214,9 @@ body {
     display: block;
     flex-wrap: wrap;
   }
+  .footer-sections{
+    width: 80%;
+  }
 
 /* Ajustes para el encabezado */
 .header {
