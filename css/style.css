@@ -2269,8 +2269,13 @@ body {
 }
 
 .footer-section {
-  width: 100%;
+  width: 80%;
   text-align: center;
+  
+}
+
+.col12{
+  display: none;
 }
 }
 /*Nosotros*/
