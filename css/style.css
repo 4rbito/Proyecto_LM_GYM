@@ -211,7 +211,7 @@ body {
 /*Cosas index */
 /* Estilos para Categorías */
 .categories {
-  padding: 4rem 0;
+  padding:  20px;
   background-color: #f9f9f9;
 }
 
@@ -293,7 +293,7 @@ body {
 
 /* Estilos para Blog */
 .blog-preview {
-  padding: 4rem 0;
+  padding:  20px;
   background-color: #f9f9f9;
 }
 
