@@ -482,7 +482,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  gap: 30px; /* Add gap between sections */
+  gap: 60px; /* Add gap between sections */
  }
 
  .footer-section {
@@ -491,7 +491,7 @@ body {
  }
  
  .footer-section h3 {
-  margin-bottom: 15px; /* Space under headers */
+  margin-bottom: 20px; /* Space under headers */
  }
  
 
@@ -547,7 +547,7 @@ body {
 
 .footer-section form button {
   padding: 10px;
-  background: #e8491d;
+  background: #ff0000;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -555,7 +555,7 @@ body {
 }
 
 .footer-section form button:hover {
-  background: #d73814;
+  background: #cc0000;
 }
 
 .footer-bottom {
