@@ -872,6 +872,7 @@ body {
  margin: auto;
  overflow: hidden;
  margin-top: 20px;
+ margin-bottom: 20px;
  background: #fff;
  padding: 20px;
  border: 1px solid #ddd;
@@ -2118,6 +2119,8 @@ body {
   left: 0;
   color: #cc0000;
 }
+
+
 @media (max-width: 768px) {
   .post-meta {
       flex-direction: column;
